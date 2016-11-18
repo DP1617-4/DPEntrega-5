@@ -16,6 +16,12 @@ Scrapbook
 !SampleWorkspace_1.6/Servers
 !SampleWorkspace_1.6/Scrapbook
 
+!Workspace/.metadata/
+!Workspace/Servers
+!Workspace/Scrapbook
+
+target/
+
 #### Por Defecto
 
 #################
@@ -23,7 +29,7 @@ Scrapbook
 #################
 
 *.pydevproject
-.project
+!.project
 #.metadata
 bin/
 tmp/
@@ -33,7 +39,7 @@ tmp/
 *~.nib
 local.properties
 .classpath
-.settings/
+!.settings/
 .loadpath
 
 # External tool builders
