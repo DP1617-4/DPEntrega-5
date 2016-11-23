@@ -30,7 +30,14 @@
 				<ul>
 					<li class="arrow"></li>
 					<li><a href="card/customer/list.do"><spring:message code="master.page.customer.list.cards" /></a></li>
-					<li><a href="card/customer/create.do"><spring:message code="master.page.customer.create.card" /></a></li>							
+					<li><a href="card/customer/create.do"><spring:message code="master.page.customer.create.card" /></a></li>	
+					<li><a><spring:message	code="master.page.customer" /></a>
+						<ul>
+							<li class="arrow"></li>
+							<li><a href="card/customer/list.do"><spring:message code="master.page.customer.list.cards" /></a></li>
+							<li><a href="card/customer/create.do"><spring:message code="master.page.customer.create.card" /></a></li>							
+						</ul>
+					</li>						
 				</ul>
 			</li>
 		</security:authorize>
