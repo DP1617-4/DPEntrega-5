@@ -31,6 +31,8 @@ name="nutritionist data" requestURI="${requestURI}" id="row">
 	
 </display:table>
 
+<br/>
+
 <jstl:if test="${nutritionist.curricula != null}">
 	<input type="button" name="view curricula"
 		onclick="javascript: relativeRedir('curricula/display.do');" />
@@ -40,5 +42,8 @@ name="nutritionist data" requestURI="${requestURI}" id="row">
 	<input type="button" name="create curricula"
 		onclick="javascript: relativeRedir('curricula/create.do');" />
 </jstl:if>
+<br />
+<input type="button" name="edit nutritionist"
+onclick="javascript: relativeRedir('nutritionist/edit.do');" />
 	
 <br />

@@ -33,19 +33,20 @@
 	<form:label path="experience">
 		<spring:message code="curricula.experience" />:
 	</form:label>
-	<form:errors cssClass="error" path="education" />
+	<form:textarea path="experience" />
+	<form:errors cssClass="error" path="experience" />
 	<br />
 	
 	<input type="submit" name="save"
 		value="<spring:message code="curricula.save" />" />&nbsp; 
 	<jstl:if test="${curricula.id != 0}">
 		<input type="submit" name="delete"
-			value="<spring:message code="folder.delete" />"
+			value="<spring:message code="curricula.delete" />"
 			onclick="return confirm('<spring:message code="curricula.confirm.delete" />')" />&nbsp;
 	</jstl:if>
 	<input type="button" name="cancel"
 		value="<spring:message code="curricula.cancel" />"
-		onclick="javascript: relativeRedir('curricula/display.do');" />
+		onclick="javascript: relativeRedir('nutritionist/display.do');" />
 	<br />
 	
 	

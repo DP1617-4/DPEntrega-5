@@ -28,9 +28,15 @@ name="user data" requestURI="${requestURI}" id="row">
 	<spring:message code="user.postalAddress" var=postalAddressHeader/>
 	<display:column property="postalAddress" title="${postalAddressHeader}"/>
 	
-	<input type="button" name="view recipes"
-		onclick="javascript: relativeRedir('recipe/list.do');" />
-	<br />	
-	
-	
 </display:table>
+<br/>
+
+<input type="button" name="view-recipes"
+onclick="javascript: relativeRedir('recipe/list.do');" />
+
+<br/>
+
+<input type="button" name="edit user"
+onclick="javascript: relativeRedir('user/edit.do');" />
+
+<br/>
