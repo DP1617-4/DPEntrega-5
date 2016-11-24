@@ -18,34 +18,67 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="folder/edit.do" modelAttribute="folder">
+<form:form action="recipe/edit.do" modelAttribute="recipe">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="actor"/>
-	<form:hidden path="systemFolder"/>
+	<form:hidden path="user"/>
+	<form:hidden path="ticker"/>
 	<form:hidden path="deleted"/>
-	<form:hidden path="messages"/>
+	<form:hidden path="score"/>
+	<form:hidden path="authored"/>
+	<form:hidden path="updated"/>
+	<form:hidden path="scores"/>
+	<form:hidden path="steps"/>
+	<form:hidden path="contest"/>
+	<form:hidden path="wonContest"/>
+	<form:hidden path="comments"/>
+	<form:hidden path="categories"/>
+	<form:hidden path="quantities"/>
+	<form:hidden path="pictures"/>
 
-	<form:label path="name">
-		<spring:message code="folder.name" />:
+	<form:label path="title">
+		<spring:message code="recipe.title" />:
 	</form:label>
-	<form:input path="name" />
-	<form:errors cssClass="error" path="name" />
+	<form:input path="title" />
+	<form:errors cssClass="error" path="title" />
 	<br />
-
+	
+	<form:label path="summary">
+		<spring:message code="recipe.summary" />:
+	</form:label>
+	<form:textarea path="summary" />
+	<form:errors cssClass="error" path="summary" />
+	<br />
+	
+	<form:label path="hints">
+		<spring:message code="recipe.hints" />:
+	</form:label>
+	<form:input path="hints" />
+	<form:errors cssClass="error" path="hints" />
+	<br />
 	
 
-	<input type="submit" name="save"
-		value="<spring:message code="folder.save" />" />&nbsp; 
-	<jstl:if test="${folder.id != 0}">
+	
+	<jstl:if test="${recipe.id != 0}">
+		<input type="submit" name="save"
+		value="<spring:message code="recipe.save" />" 
+		onclick="javascript: relativeRedir('recipe/list.do');" />&nbsp; 
+			
+	</jstl:if>
+	<jstl:if test="${recipe.id != 0}">
 		<input type="submit" name="delete"
-			value="<spring:message code="folder.delete" />"
-			onclick="return confirm('<spring:message code="folder.confirm.delete" />')" />&nbsp;
+			value="<spring:message code="recipe.delete" />"
+			onclick="return confirm('<spring:message code="recipe.confirm.delete" />')" />&nbsp;
+	</jstl:if>
+	<jstl:if test="${recipe.id == 0}">
+		<input type="submit" name="continue"
+			value="<spring:message code="recipe.continue" />"
+			onclick="javascript: relativeRedir('recipe/addingredients.do?recipeId=${recipe.id}');"/>&nbsp;
 	</jstl:if>
 	<input type="button" name="cancel"
-		value="<spring:message code="folder.cancel" />"
-		onclick="javascript: relativeRedir('folder/list.do');" />
+		value="<spring:message code="recipe.cancel" />"
+		onclick="javascript: relativeRedir('recipe/list.do');" />&nbsp;
 	<br />
 
 	
