@@ -19,6 +19,13 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
+<security:authorize access="hasRole('USER')">
+	<div>
+		<a href="recipe/own/list.do"> <spring:message
+				code="recipe.user.list.own" />
+		</a>
+	</div>
+</security:authorize>
 
 <display:table pagesize="10" class="displaytag" keepStatus="true"
 	name="recipe" requestURI="${requestURI}" id="row">
@@ -71,10 +78,14 @@
 		<a href="category/list.do?recipeId=${row.id}"><spring:message code="recipe.category.list"/></a>
 	</display:column>
 	
+	<display:column>
+		<a href="comment/list.do?recipeId=${row.id}"><spring:message code="recipe.comment.list"/></a>
+	</display:column>
+	
 </display:table>
 
 <div>
-	<a href="folder/create.do"> <spring:message
-			code="folder.create" />
+	<a href="recipe/create.do"> <spring:message
+			code="recipe.create" />
 	</a>
 </div>

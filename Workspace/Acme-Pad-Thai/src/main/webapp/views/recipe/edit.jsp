@@ -60,6 +60,8 @@
 	
 
 	
+
+	
 	<jstl:if test="${recipe.id != 0}">
 		<input type="submit" name="save"
 		value="<spring:message code="recipe.save" />" 
