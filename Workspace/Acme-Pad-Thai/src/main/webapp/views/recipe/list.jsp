@@ -32,7 +32,7 @@
 	<jstl:set var="loggedactor" value=<security:authentication property="principal.username" />/>
 	<jstl:set var="recipeuser" value="${row.user}"/> 
 	<display:column>
-		<jstl:if test="${recipeuser.userAccount==loggedactor}">
+		<jstl:if test="${recipeuser.userAccount.id==loggedactor.id}">
 			<a href="recipe/edit.do?recipeId=${row.id}">
 				<spring:message	code="recipe.edit" />
 			</a>
@@ -44,23 +44,9 @@
 	<spring:message code="recipe.title" var="titleHeader" />
 	<display:column property="title" title="${titleHeader}" sortable="true" />
 	
-	<spring:message code="recipe.summary" var="summaryHeader" />
-	<display:column property="summary" title="${summaryHeader}" sortable="false" />
-	
 	<display:column>
-		<a href="recipe/user/list.do?userId=${recipeuser}"><spring:message code="recipe.user.list"/></a>
+		<a href="recipe/user/list.do?userId=${recipeuser.id}"><spring:message code="recipe.user.list"/></a>
 	</display:column>
-	
-	<display:column>
-		<a href="ingredient/list.do?recipeId=${row.id}"><spring:message code="recipe.ingredient.list"/></a>
-	</display:column>
-	
-	<display:column>
-		<a href="step/list.do?recipeId=${row.id}"><spring:message code="recipe.step.list"/></a>
-	</display:column>
-
-	<spring:message code="recipe.hints" var="hintsHeader" />
-	<display:column property="hints" title="${hintsHeader}" sortable="false" />
 	
 	<spring:message code="recipe.authored" var="authoredHeader" />
 	<display:column property="authored" title="${authoredHeader}" sortable="true" />
@@ -82,10 +68,16 @@
 		<a href="comment/list.do?recipeId=${row.id}"><spring:message code="recipe.comment.list"/></a>
 	</display:column>
 	
+	<display:column>
+		<a href="recipe/display.do?recipeId=${row.id}"><spring:message code="recipe.display"/></a>
+	</display:column>
+	
 </display:table>
 
-<div>
-	<a href="recipe/create.do"> <spring:message
-			code="recipe.create" />
-	</a>
-</div>
+<security:authorize access="hasRole('USER')">
+	<div>
+		<a href="recipe/create.do"> <spring:message
+				code="recipe.create" />
+		</a>
+	</div>
+</security:authorize>

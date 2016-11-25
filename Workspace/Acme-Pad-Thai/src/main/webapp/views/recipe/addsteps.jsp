@@ -18,36 +18,18 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="recipe/edit.do" modelAttribute="recipe">
+<form:form action="recipe/addsteps.do" modelAttribute="step">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="user"/>
-	<form:hidden path="ticker"/>
-	<form:hidden path="deleted"/>
-	<form:hidden path="score"/>
-	<form:hidden path="authored"/>
-	<form:hidden path="updated"/>
-	<form:hidden path="scores"/>
-	<form:hidden path="steps"/>
-	<form:hidden path="contest"/>
-	<form:hidden path="wonContest"/>
-	<form:hidden path="comments"/>
-	<form:hidden path="categories"/>
-	<form:hidden path="quantities"/>
+	<form:hidden path="stepNumber"/>
+	<form:hidden path="recipe"/>
 
-	<form:label path="title">
-		<spring:message code="recipe.title" />:
+	<form:label path="desccription">
+		<spring:message code="recipe.step.description" />:
 	</form:label>
-	<form:input path="title" />
-	<form:errors cssClass="error" path="title" />
-	<br />
-	
-	<form:label path="summary">
-		<spring:message code="recipe.summary" />:
-	</form:label>
-	<form:textarea path="summary" />
-	<form:errors cssClass="error" path="summary" />
+	<form:textarea path="description" />
+	<form:errors cssClass="error" path="description" />
 	<br />
 	
 	<form:label path="hints">
@@ -55,23 +37,18 @@
 	</form:label>
 	<form:input path="hints" />
 	<form:errors cssClass="error" path="hints" />
-	<br />
+		
+	<br/>
 	
-	<!-- <input type="text" name="consult.consultTechnos[].techno.id" /> USEFUL FOR PICTURES-->
 	
-
 	<input type="submit" name="save"
 	value="<spring:message code="recipe.save" />" 
-	onclick="javascript: relativeRedir('recipe/list.do');" />&nbsp; 
-			
-	<jstl:if test="${recipe.id != 0}">
-		<input type="submit" name="delete"
-			value="<spring:message code="recipe.delete" />"
-			onclick="return confirm('<spring:message code="recipe.confirm.delete" />')" />&nbsp;
-	</jstl:if>
+	onclick="javascript: relativeRedir('recipe/display.do?recipeId=${recipe.id}');" />&nbsp; 	
+
+	
 	<input type="button" name="cancel"
 		value="<spring:message code="recipe.cancel" />"
-		onclick="javascript: relativeRedir('recipe/list.do');" />&nbsp;
+		onclick="javascript: relativeRedir('recipe/display.do?recipeId=${recipe.id}');" />&nbsp;
 	<br />
 
 	

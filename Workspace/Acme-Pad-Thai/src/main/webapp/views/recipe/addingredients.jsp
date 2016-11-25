@@ -18,19 +18,13 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="recipe/addingredients.do" modelAttribute="recipe">
+<form:form action="recipe/addingredients.do" modelAttribute="quantity">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
 	<form:hidden path="ingredient"/>
 	<form:hidden path="recipe"/>
-	
-	<form:label path="ingredient"><spring:message code="recipe.add.ingredient"/></form:label>
-	<form:select path="ingredient">
-		<form:options items="${ingredientlist}" itemValue="ingredientId"  itemLabel="name" />
-	</form:select>
-	<br/>
-	
+
 	<form:label path="quantity">
 		<spring:message code="recipe.quantity" />:
 	</form:label>
@@ -46,26 +40,15 @@
 		
 	<br/>
 	
-	<input type="submit" name="moreingredients"
-		value="<spring:message code="recipe.ingredient.more" />"
-		onclick="javascript: relativeRedir('recipe/addingredients.do?recipeId=${recipe.id}&unit=${unit}&quantity=${quantity}&ingredient=${ingredientId&unit=${unit}&quantity=${quantity}&ingredient=${ingredientId}');"/>&nbsp;
-		<br />
 	
-	<jstl:if test="${recipe.id == 0}">
-		<input type="submit" name="continue"
-			value="<spring:message code="recipe.continue" />"
-			onclick="javascript: relativeRedir('recipe/addsteps.do?recipeId=${recipe.id}');"/>&nbsp;
-	</jstl:if>
+	<input type="submit" name="save"
+	value="<spring:message code="recipe.save" />" 
+	onclick="javascript: relativeRedir('recipe/display.do?recipeId=${recipe.id}');" />&nbsp; 	
 
-	<jstl:if test="${recipe.id != 0}">
-		<input type="submit" name="save"
-		value="<spring:message code="recipe.save" />" 
-		onclick="javascript: relativeRedir('recipe/list.do');" />&nbsp; 	
-	</jstl:if>
 	
 	<input type="button" name="cancel"
 		value="<spring:message code="recipe.cancel" />"
-		onclick="javascript: relativeRedir('recipe/list.do');" />&nbsp;
+		onclick="javascript: relativeRedir('recipe/display.do?recipeId=${recipe.id}');" />&nbsp;
 	<br />
 
 	
