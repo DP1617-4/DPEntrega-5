@@ -13,26 +13,23 @@
 <display:table pagesize="10" class="displaytag" keepStatus="true"
 name="user data" requestURI="${requestURI}" id="row">
 
-	<spring:message code="curricula.name" var=curriculaHeader/>
-	<display:column property="curricula" title="${curriculaHeader}"/>
+	<spring:message code="curricula.picture" var=pictureHeader/>
+	<display:column property="picture" title="${pictureHeader}"/>
 	
-	<spring:message code="user.surname" var=surnameHeader/>
-	<display:column property="surname" title="${surnameHeader}"/>
+	<spring:message code="curricula.education" var=educationHeader/>
+	<display:column property="education" title="${educationHeader}"/>
 	
-	<spring:message code="user.email" var=emailHeader/>
-	<display:column property="email" title="${emailHeader}"/>
+	<spring:message code="curricula.experience" var=experienceHeader/>
+	<display:column property="experience" title="${experienceHeader}"/>
 	
-	<spring:message code="user.phone" var=phoneHeader/>
-	<display:column property="phone" title="${phoneHeader}"/>
-	
-	<spring:message code="user.postalAddress" var=postalAddressHeader/>
-	<display:column property="postalAddress" title="${postalAddressHeader}"/>
+	<spring:message code="curricula.hobbies" var=hobbiesHeader/>
+	<display:column property="hobbies" title="${hobbiesHeader}"/>
 	
 </display:table>
 <br/>
 
 <input type="button" name="view-endorsers"
-value="<spring:message code="endorser.list" />"
+value="<spring:message code="curricula.endorser.list" />"
 onclick="javascript: relativeRedir('endorser/list.do');" />
 
 <br/>
