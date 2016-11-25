@@ -18,63 +18,48 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="step/edit.do" modelAttribute="category">
+<form:form action="step/edit.do" modelAttribute="step">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="recipes"/>
-	<form:hidden path="sons"/>
-	<jstl:if test="${category.id!=0}">
-		<form:hidden path="father"/>
-	</jstl:if>
-	<form:hidden path="deleted"/>
+	<form:hidden path="recipe"/>
 
-	<form:label path="name">
-		<spring:message code="category.name" />:
-	</form:label>
-	<form:input path="name" />
-	<form:errors cssClass="error" path="name" />
-	<br />
 	<form:label path="description">
-		<spring:message code="category.description" />:
+		<spring:message code="step.description" />:
 	</form:label>
 	<form:input path="description" />
 	<form:errors cssClass="error" path="description" />
 	<br />
-	<form:label path="picture">
-		<spring:message code="category.picture" />:
+	<form:label path="pictures">
+		<spring:message code="step.pictures" />:
 	</form:label>
-	<form:input path="picture" />
-	<form:errors cssClass="error" path="picture" />
+	<form:input path="pictures" />
+	<form:errors cssClass="error" path="pictures" />
 	<br />
-	<form:label path="tag">
-		<spring:message code="category.tag" />:
+	<form:label path="hints">
+		<spring:message code="step.hints" />:
 	</form:label>
-	<form:input path="tag" />
-	<form:errors cssClass="error" path="tag" />
+	<form:input path="hints" />
+	<form:errors cssClass="error" path="hints" />
 	<br />
-	<jstl:if test="${category.id==0}">
-		<form:label path="father">
-			<spring:message code="category.father" />:
-		</form:label>
-		<form:select path="father" />
-		<form:errors cssClass="error" path="father" />
-	</jstl:if>
-
+	<form:label path="stepNumber">
+		<spring:message code="step.stepNumber" />:
+	</form:label>
+	<form:input path="stepNumber" />
+	<form:errors cssClass="error" path="stepNumber" />
+	<br />
 	
 
 	<input type="submit" name="save"
-		value="<spring:message code="category.save" />" />&nbsp; 
+		value="<spring:message code="step.save" />" />&nbsp; 
 	<jstl:if test="${category.id != 0}">
 		<input type="submit" name="delete"
-			value="<spring:message code="category.delete" />"
-			onclick="return confirm('<spring:message code="category.confirm.delete" />')" />&nbsp;
+			value="<spring:message code="step.delete" />"
+			onclick="return confirm('<spring:message code="step.confirm.delete" />')" />&nbsp;
 	</jstl:if>
 	<input type="button" name="cancel"
-		value="<spring:message code="category.cancel" />"
-		onclick="javascript: relativeRedir('category/list.do');" />
+		value="<spring:message code="step.cancel" />"
+		onclick="javascript: relativeRedir('recipe/list.do');" />
 	<br />
-
-	
 
 </form:form>

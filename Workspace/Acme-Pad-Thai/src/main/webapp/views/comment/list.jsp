@@ -39,6 +39,9 @@
 </display:table>
 
 	<!-- Action links -->
+<div>
+	<a href="recipe/display.do?recipeId=${row.id}"><spring:message code="recipe.display"/></a>
+</div>
 
 <div>
 	<a href="comment/create.do"> <spring:message
