@@ -16,14 +16,14 @@
        
 <tiles-definitions>
 
-	<definition name="folder/list" extends="master.page">	
-		<put-attribute name="title" value="List folders" />
-		<put-attribute name="body" value="/views/folder/list.jsp" />
+	<definition name="social-identity/list" extends="master.page">	
+		<put-attribute name="title" value="List identities" />
+		<put-attribute name="body" value="/views/social-identity/list.jsp" />
 	</definition>
 	
-	<definition name="folder/edit" extends="master.page">	
-		<put-attribute name="title" value="Edit folder" />
-		<put-attribute name="body" value="/views/folder/edit.jsp" />
+	<definition name="social-identity/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit identity" />
+		<put-attribute name="body" value="/views/social-identity/edit.jsp" />
 	</definition>
 	
 </tiles-definitions>

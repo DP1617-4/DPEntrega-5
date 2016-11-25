@@ -1,5 +1,5 @@
 <%--
- * edit.jsp
+ * move.jsp
  *
  * Copyright (C) 2016 Universidad de Sevilla
  * 
@@ -18,34 +18,34 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="folder/edit.do" modelAttribute="folder">
+
+<form:form action="message/edit.do" modelAttribute="message">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="actor"/>
-	<form:hidden path="systemFolder"/>
-	<form:hidden path="deleted"/>
-	<form:hidden path="messages"/>
+	<form:hidden path="sender"/>
+	<form:hidden path="recipient"/>
+	<form:hidden path="title"/>	
+	<form:hidden path="body"/>
+	<form:hidden path="moment"/>
+	<form:hidden path="priority"/>
 
-	<form:label path="name">
-		<spring:message code="folder.name" />:
+	<form:label path="folder">
+		<spring:message code="message.folder.new" />:
 	</form:label>
-	<form:input path="name" />
-	<form:errors cssClass="error" path="name" />
+	<form:select id="folders" path="folder" >
+		<form:option value="0" label="----"/>
+		<form:options items="${folders}" itemValue="id" itemLabel="name"/>
+	</form:select>
+	<form:errors cssClass="error" path="priority" />
 	<br />
 
-	
 
 	<input type="submit" name="save"
-		value="<spring:message code="folder.save" />" />&nbsp; 
-	<jstl:if test="${folder.id != 0}">
-		<input type="submit" name="delete"
-			value="<spring:message code="folder.delete" />"
-			onclick="return confirm('<spring:message code="folder.confirm.delete" />')" />&nbsp;
-	</jstl:if>
+		value="<spring:message code="message.save" />" />&nbsp; 
 	<input type="button" name="cancel"
-		value="<spring:message code="folder.cancel" />"
-		onclick="javascript: relativeRedir('folder/list.do');" />
+		value="<spring:message code="message.cancel" />"
+		onclick="javascript: relativeRedir('message/list.do?folderId=${message.folder.id}');" />
 	<br />
 
 	

@@ -1,5 +1,5 @@
 <%--
- * action-2.jsp
+ * list.jsp
  *
  * Copyright (C) 2016 Universidad de Sevilla
  * 
@@ -24,51 +24,44 @@
 	
 	<!-- Action links -->
 
-	<security:authorize access="hasRole('ADMIN')">
-		<display:column>
-			<a href="message/move.do?announcementId=${row.id}">
-				<spring:message	code="announcement.edit" />
-			</a>
-		</display:column>		
-	</security:authorize>
+	<display:column>
+		<a href="message/move.do?messageId=${row.id}">
+			<spring:message	code="message.move" />
+		</a>
+	</display:column>		
 
-	<security:authorize access="hasRole('CUSTOMER')">
-		<display:column>
-			<jstl:choose>
-				<jstl:when test="${registeredAnnouncements.contains(row)}">
-					<a href="announcement/customer/unregister.do?announcementId=${row.id}" 
-					   onclick="javascript: return confirm('<spring:message code="announcement.confirm.unregister" />')">
-						<spring:message code="announcement.unregister" />
-					</a>					
-				</jstl:when>
-				<jstl:otherwise>
-					<a href="announcement/customer/register.do?announcementId=${row.id}">
-						<spring:message code="announcement.register" />
-					</a>
-				</jstl:otherwise>
-			</jstl:choose>
-		</display:column>
-	</security:authorize>
+	
 	
 	<!-- Attributes -->
 	
-	<spring:message code="announcement.title" var="titleHeader" />
+	<spring:message code="message.title" var="titleHeader" />
 	<display:column property="title" title="${titleHeader}" sortable="true" />
 
-	<spring:message code="announcement.moment" var="momentHeader" />
+	<spring:message code="message.moment" var="momentHeader" />
 	<display:column property="moment" title="${momentHeader}" sortable="true" format="{0,date,dd/MM/yyyy HH:mm}" />
 
-	<spring:message code="announcement.description" var="descriptionHeader" />
-	<display:column property="description" title="${descriptionHeader}" sortable="false" />
+	<spring:message code="message.body" var="bodyHeader" />
+	<display:column property="body" title="${descriptionHeader}" sortable="false" />
+	
+	<spring:message code="message.priority" var="priorityHeader"/>
+	<display:column property="priority" title="${priorityHeader}" sortable="true"/>
+	
+	<spring:message code="message.sender" var="senderHeader"/>
+	<display:column title="${senderHeader}">
+		<a href="user/display.do?userId=${row.sender.id}"><spring:message code="message.profile.access"/> </a>
+	</display:column>
+	
+	<spring:message code="message.recipient" var="recipientHeader"/>
+	<display:column title="${recipientHeader}">
+		<a href="user/display.do?userId=${row.recipient.id}"><spring:message code="message.profile.access"/> </a>
+	</display:column>
 
 </display:table>
 
 <!-- Action links -->
 
-<security:authorize access="hasRole('ADMIN')">
-	<div>
-		<a href="announcement/administrator/create.do"> <spring:message
-				code="announcement.create" />
-		</a>
-	</div>
-</security:authorize>
+<div>
+	<a href="message/create.do"> <spring:message
+			code="message.create" />
+	</a>
+</div>

@@ -1,5 +1,5 @@
 <%--
- * action-1.jsp
+ * list.jsp
  *
  * Copyright (C) 2016 Universidad de Sevilla
  * 
@@ -21,7 +21,7 @@
 <display:table pagesize="5" class="displaytag" keepStatus="true"
 	name="folders" requestURI="${requestURI}" id="row">
 	<display:column>
-		<jstl:if test="${!row.sysFolder}">
+		<jstl:if test="${!row.systemFolder}">
 			<a href="folder/edit.do?folderId=${row.id}">
 				<spring:message	code="folder.edit" />
 			</a>
