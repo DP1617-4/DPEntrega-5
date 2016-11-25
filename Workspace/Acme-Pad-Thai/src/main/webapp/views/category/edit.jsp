@@ -24,7 +24,9 @@
 	<form:hidden path="version" />
 	<form:hidden path="recipes"/>
 	<form:hidden path="sons"/>
-	<form:hidden path="father"/>
+	<jstl:if test="${category.id!=0}">
+		<form:hidden path="father"/>
+	</jstl:if>
 	<form:hidden path="deleted"/>
 
 	<form:label path="name">
@@ -51,6 +53,13 @@
 	<form:input path="tag" />
 	<form:errors cssClass="error" path="tag" />
 	<br />
+	<jstl:if test="${category.id==0}">
+		<form:label path="father">
+			<spring:message code="category.father" />:
+		</form:label>
+		<form:select path="father" />
+		<form:errors cssClass="error" path="father" />
+	</jstl:if>
 
 	
 

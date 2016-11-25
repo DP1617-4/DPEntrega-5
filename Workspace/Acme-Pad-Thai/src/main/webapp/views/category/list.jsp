@@ -19,28 +19,33 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 <display:table pagesize="5" class="displaytag" keepStatus="true"
-	name="folders" requestURI="${requestURI}" id="row">
-	<display:column>
-		<jstl:if test="${!row.sysFolder}">
-			<a href="folder/edit.do?folderId=${row.id}">
-				<spring:message	code="folder.edit" />
-			</a>
-		</jstl:if>
-	</display:column>
-	<display:column>
-		<a href="message/list.do?folderId=${row.id}"><spring:message code="folder.message.list"/></a>
-	</display:column>
+	name="categories" requestURI="${requestURI}" id="row">
 	
 	<!-- Attributes -->
 	
-	<spring:message code="folder.name" var="nameHeader" />
+	<spring:message code="category.name" var="nameHeader" />
 	<display:column property="name" title="${nameHeader}" sortable="true" />
-
+	<spring:message code="category.description" var="descriptionHeader" />
+	<display:column property="description" title="${descriptionHeader}" sortable="true" />
+	<spring:message code="category.picture" var="pictureHeader" />
+	<display:column property="picture" title="${pictureHeader}" sortable="true" />
+	<spring:message code="category.tag" var="tagHeader" />
+	<display:column property="tag" title="${tagHeader}" sortable="true" />
+	<spring:message code="category.father" var="fatherHeader"/>
+	<display:column title="${fatherHeader}">
+		<a href="category/display.do?categoryId=${row.father.id}"><spring:message code="category.father"/> </a>
+	</display:column>
+	<spring:message code="category.sons" var="sonsHeader"/>
+	<display:column title="${sonsHeader}">
+		<a href="category/display.do?categoryId=${row.sons.id}"><spring:message code="category.sons"/> </a>
+	</display:column>
 	
 </display:table>
 
+	<!-- Action links -->
+
 <div>
-	<a href="folder/create.do"> <spring:message
-			code="folder.create" />
+	<a href="category/create.do"> <spring:message
+			code="category.create" />
 	</a>
 </div>
