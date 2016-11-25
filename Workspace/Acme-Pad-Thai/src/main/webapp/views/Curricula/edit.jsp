@@ -41,8 +41,8 @@
 		value="<spring:message code="curricula.save" />" />&nbsp; 
 	<jstl:if test="${curricula.id != 0}">
 		<input type="submit" name="delete"
-			value="<spring:message code="curricula.delete" />"
-			onclick="return confirm('<spring:message code="curricula.confirm.delete" />')" />&nbsp;
+		value="<spring:message code="curricula.delete" />"
+		onclick="return confirm('<spring:message code="curricula.confirm.delete" />')" />&nbsp;
 	</jstl:if>
 	<input type="button" name="cancel"
 		value="<spring:message code="curricula.cancel" />"

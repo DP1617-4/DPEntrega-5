@@ -35,15 +35,18 @@ name="nutritionist data" requestURI="${requestURI}" id="row">
 
 <jstl:if test="${nutritionist.curricula != null}">
 	<input type="button" name="view curricula"
-		onclick="javascript: relativeRedir('curricula/display.do');" />
+	value="<spring:message code="curricula.display" />"
+	onclick="javascript: relativeRedir('curricula/display.do');" />
 </jstl:if>
 
 <jstl:if test="${nutritionist.curricula == null}">
 	<input type="button" name="create curricula"
-		onclick="javascript: relativeRedir('curricula/create.do');" />
+	value="<spring:message code="curricula.create" />"
+	onclick="javascript: relativeRedir('curricula/create.do');" />
 </jstl:if>
 <br />
-<input type="button" name="edit nutritionist"
-onclick="javascript: relativeRedir('nutritionist/edit.do');" />
+	<input type="button" name="edit nutritionist"
+	value="<spring:message code="curricula.edit" />"
+	onclick="javascript: relativeRedir('nutritionist/edit.do');" />
 	
 <br />

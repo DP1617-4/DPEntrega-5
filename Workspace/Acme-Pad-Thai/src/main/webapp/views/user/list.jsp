@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
@@ -9,10 +10,34 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-
 <display:table pagesize="10" class="displaytag" keepStatus="true"
-name="user data" requestURI="${requestURI}" id="row">
+	name="users" requestURI="${requestURI}" id="row">
+	
+	<!-- Action links -->
 
+	<jstl:set var="loggedactor" value=<security:authentication property="principal.username" />/>
+	<display:column>
+		<jstl:if test="${user.userAccount!=loggedactor}">
+			<jstl:set var="contains" value="false" />
+				<jstl:forEach var=user items="${loggedactor.followed}">
+ 					<jstl:if test="${user.id == followed.id}">
+    					<jstl:set var="contains" value="true" />
+ 					</jstl:if>
+				</jstl:forEach>
+				<jstl:if test="${contains == true}">
+    					<input type="button" name="unfollow"
+						value="<spring:message code="user.unfollow" />"/>
+ 				</jstl:if>
+ 				<jstl:if test="${contains == false}">
+    					<input type="button" name="follow"
+						value="<spring:message code="user.follow" />"/>
+ 				</jstl:if>
+		</jstl:if>
+	</display:column>
+	
+	
+	<!-- Attributes -->
+	
 	<spring:message code="user.name" var=nameHeader/>
 	<display:column property="name" title="${nameHeader}"/>
 	
@@ -27,18 +52,5 @@ name="user data" requestURI="${requestURI}" id="row">
 	
 	<spring:message code="user.postalAddress" var=postalAddressHeader/>
 	<display:column property="postalAddress" title="${postalAddressHeader}"/>
-	
+
 </display:table>
-<br/>
-
-<input type="button" name="view-recipes"
-value="<spring:message code="recipes.list" />"
-onclick="javascript: relativeRedir('recipe/list.do');" />
-
-<br/>
-
-<input type="button" name="edit user"
-value="<spring:message code="user.edit" />"
-onclick="javascript: relativeRedir('user/edit.do');" />
-
-<br/>
