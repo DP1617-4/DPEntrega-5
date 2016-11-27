@@ -42,7 +42,7 @@
 	<form:label path="closingTime">
 		<spring:message code="contest.closingTime" />:
 	</form:label>
-	<form:input path="picture" />
+	<form:input path="closingTime" />
 	<form:errors cssClass="error" path="closingTime" />
 	<br />
 
