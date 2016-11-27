@@ -37,6 +37,13 @@
 	<form:errors cssClass="error" path="experience" />
 	<br />
 	
+	<form:label path="hobbies">
+		<spring:message code="curricula.hobbies" />:
+	</form:label>
+	<form:textarea path="hobbies" />
+	<form:errors cssClass="error" path="hobbies" />
+	<br />
+	
 	<input type="submit" name="save"
 		value="<spring:message code="curricula.save" />" />&nbsp; 
 	<jstl:if test="${curricula.id != 0}">
