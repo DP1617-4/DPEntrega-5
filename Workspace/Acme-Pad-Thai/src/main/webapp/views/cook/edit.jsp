@@ -16,43 +16,45 @@
 <%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="administrator/edit.do" modelAttribute="administrator">
+<form:form action="cook/edit.do" modelAttribute="cook">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
 	<form:hidden path="userAccount.authorities" />
 	<form:hidden path="folders"/>
+	<form:hidden path="masterclasses"/>
+	<form:hidden path="enroled"/>
 	
 	<form:label path="name">
-		<spring:message code="administrator.name" />:
+		<spring:message code="cook.name" />:
 	</form:label>
 	<form:input path="name" />
 	<form:errors cssClass="error" path="name" />
 	<br />
 	
 	<form:label path="surname">
-		<spring:message code="administrator.surname" />:
+		<spring:message code="cook.surname" />:
 	</form:label>
 	<form:textarea path="surname" />
 	<form:errors cssClass="error" path="surname" />
 	<br />
 	
 	<form:label path="email">
-		<spring:message code="administrator.email" />:
+		<spring:message code="cook.email" />:
 	</form:label>
 	<form:textarea path="email" />
 	<form:errors cssClass="error" path="email" />
 	<br />
 	
 	<form:label path="postalAddress">
-		<spring:message code="administrator.postalAddress" />:
+		<spring:message code="cook.postalAddress" />:
 	</form:label>
 	<form:textarea path="postalAddress" />
 	<form:errors cssClass="error" path="postalAddress" />
 	<br />
 	
 	<form:label path="phone">
-		<spring:message code="administrator.phone" />:
+		<spring:message code="cook.phone" />:
 	</form:label>
 	<form:textarea path="phone" />
 	<form:errors cssClass="error" path="phone" />
@@ -60,16 +62,16 @@
 	
 	
 	
-	<jstl:if test="${administrator.id == 0}">
+	<jstl:if test="${cook.id == 0}">
 	<form:label path="userAccount.username">
-      <spring:message code="administrator.username" />
+      <spring:message code="cook.username" />
     </form:label>
     <form:input path="userAccount.username"/>
     <form:errors cssClass="error" path="userAccount.username"/>
     <br />
     
     <form:label path="userAccount.password">
-      <spring:message code="administrator.password" />
+      <spring:message code="cook.password" />
     </form:label>
     <form:password path="userAccount.password"/>
     <form:errors cssClass="error" path="userAccount.password"/>
@@ -77,9 +79,9 @@
     <br />
 	
 	<input type="submit" name="save"
-		value="<spring:message code="administrator.save" />" />&nbsp; 
+		value="<spring:message code="cook.save" />" />&nbsp; 
 	<input type="button" name="cancel"
-		value="<spring:message code="administrator.cancel" />"
+		value="<spring:message code="cook.cancel" />"
 		onclick="javascript: relativeRedir('welcome/index.do');" />
 	<br />
 	
