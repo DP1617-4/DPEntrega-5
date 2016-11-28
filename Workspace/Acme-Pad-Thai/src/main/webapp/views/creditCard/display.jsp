@@ -8,6 +8,14 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+<security:authorize access="hasRole('SPONSOR')">
+	<div>
+		<a href="sponsor/creditCard/list.do"> 
+			<spring:message code="creditCard.list.own" />
+		</a>
+	</div>
+</security:authorize>
+
 <display:table pagesize="10" class="displaytag" keepStatus="true"
 name="sponsor data" requestURI="${requestURI}" id="row">
 

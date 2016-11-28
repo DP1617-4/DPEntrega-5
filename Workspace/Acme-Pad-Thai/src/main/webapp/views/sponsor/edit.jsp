@@ -22,8 +22,22 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="creditCard" />
+	<form:hidden path="userAccount.authorities" />
 	
+	<form:label path="userAccount.username">
+      <spring:message code="consumer.username" />
+    </form:label>
+    <form:input path="userAccount.username"/>
+    <form:errors cssClass="error" path="userAccount.username"/>
+    <br />
+    
+    <form:label path="userAccount.password">
+      <spring:message code="consumer.password" />
+    </form:label>
+    <form:password path="userAccount.password"/>
+    <form:errors cssClass="error" path="userAccount.password"/>
+    <br />
+
 	<form:label path="name">
 		<spring:message code="sponsor.name" />:
 	</form:label>
