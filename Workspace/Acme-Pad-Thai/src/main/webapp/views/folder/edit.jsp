@@ -34,7 +34,6 @@
 	<form:errors cssClass="error" path="name" />
 	<br />
 
-	
 
 	<input type="submit" name="save"
 		value="<spring:message code="folder.save" />" />&nbsp; 
