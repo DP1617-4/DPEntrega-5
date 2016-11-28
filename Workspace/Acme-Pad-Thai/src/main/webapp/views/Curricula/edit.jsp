@@ -15,6 +15,7 @@
 	<form:hidden path="version" />
 	<form:hidden path="deleted" />
 	<form:hidden path="endorsers" />
+	<form:hidden path="nutritionist" />
 	
 	<form:label path="picture">
 		<spring:message code="curricula.picture" />:

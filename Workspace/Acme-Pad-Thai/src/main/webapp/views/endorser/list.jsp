@@ -35,8 +35,8 @@
 
 <br/>
 
-<input type="button" name="create"
-value="<spring:message code="endorser.create" />"
-onclick="javascript: relativeRedir('endorser/create.do');" />
+<a href="endorser/create.do"> <spring:message
+code="endorser.create" />
+</a>
 
 <br/>
