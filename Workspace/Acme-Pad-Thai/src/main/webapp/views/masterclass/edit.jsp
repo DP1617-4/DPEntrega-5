@@ -18,45 +18,41 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="contest/edit.do" modelAttribute="contest">
+<form:form action="masterclass/edit.do" modelAttribute="masterclass">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="recipes"/>
-	<form:hidden path="qualified"/>
-	<form:hidden path="winners"/>
+	<form:hidden path="cook"/>
+	<form:hidden path="actors"/>
 	<form:hidden path="deleted"/>
+	<form:hidden path="promoted"/>
 
 	<form:label path="title">
-		<spring:message code="contest.title" />:
+		<spring:message code="masterclass.title" />:
 	</form:label>
 	<form:input path="title" />
 	<form:errors cssClass="error" path="title" />
 	<br />
-	<form:label path="openingTime">
-		<spring:message code="contest.openingTime" />:
+	
+	<form:label path="description">
+		<spring:message code="masterclass.description" />:
 	</form:label>
-	<form:input path="openingTime" />
-	<form:errors cssClass="error" path="openingTime" />
+	<form:textarea path="description" />
+	<form:errors cssClass="error" path="description" />
 	<br />
-	<form:label path="closingTime">
-		<spring:message code="contest.closingTime" />:
-	</form:label>
-	<form:input path="closingTime" />
-	<form:errors cssClass="error" path="closingTime" />
-	<br />
-
-
+	
+	
 	<input type="submit" name="save"
-		value="<spring:message code="contest.save" />" />&nbsp; 
-	<jstl:if test="${category.id != 0}">
+	value="<spring:message code="masterclass.save" />"  />&nbsp; 
+			
+	<jstl:if test="${masterclass.id != 0}">
 		<input type="submit" name="delete"
-			value="<spring:message code="contest.delete" />"
-			onclick="return confirm('<spring:message code="contest.confirm.delete" />')" />&nbsp;
+			value="<spring:message code="masterclass.delete" />"
+			onclick="return confirm('<spring:message code="masterclass.confirm.delete" />')" />&nbsp;
 	</jstl:if>
 	<input type="button" name="cancel"
-		value="<spring:message code="contest.cancel" />"
-		onclick="javascript: relativeRedir('contest/list.do');" />
+		value="<spring:message code="masterclass.cancel" />"
+		onclick="javascript: relativeRedir('masterclass/list.do');" />&nbsp;
 	<br />
 
 	

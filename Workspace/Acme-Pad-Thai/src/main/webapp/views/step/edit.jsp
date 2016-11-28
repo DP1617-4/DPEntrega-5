@@ -18,47 +18,48 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="contest/edit.do" modelAttribute="contest">
+<form:form action="step/edit.do" modelAttribute="step">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="recipes"/>
-	<form:hidden path="qualified"/>
-	<form:hidden path="winners"/>
-	<form:hidden path="deleted"/>
+	<form:hidden path="recipe"/>
 
-	<form:label path="title">
-		<spring:message code="contest.title" />:
+	<form:label path="description">
+		<spring:message code="step.description" />:
 	</form:label>
-	<form:input path="title" />
-	<form:errors cssClass="error" path="title" />
+	<form:input path="description" />
+	<form:errors cssClass="error" path="description" />
 	<br />
-	<form:label path="openingTime">
-		<spring:message code="contest.openingTime" />:
+	<form:label path="pictures">
+		<spring:message code="step.pictures" />:
 	</form:label>
-	<form:input path="openingTime" />
-	<form:errors cssClass="error" path="openingTime" />
+	<form:input path="pictures" />
+	<form:errors cssClass="error" path="pictures" />
 	<br />
-	<form:label path="closingTime">
-		<spring:message code="contest.closingTime" />:
+	<form:label path="hints">
+		<spring:message code="step.hints" />:
 	</form:label>
-	<form:input path="closingTime" />
-	<form:errors cssClass="error" path="closingTime" />
+	<form:input path="hints" />
+	<form:errors cssClass="error" path="hints" />
 	<br />
-
+	<form:label path="stepNumber">
+		<spring:message code="step.stepNumber" />:
+	</form:label>
+	<form:input path="stepNumber" />
+	<form:errors cssClass="error" path="stepNumber" />
+	<br />
+	
 
 	<input type="submit" name="save"
-		value="<spring:message code="contest.save" />" />&nbsp; 
+		value="<spring:message code="step.save" />" />&nbsp; 
 	<jstl:if test="${category.id != 0}">
 		<input type="submit" name="delete"
-			value="<spring:message code="contest.delete" />"
-			onclick="return confirm('<spring:message code="contest.confirm.delete" />')" />&nbsp;
+			value="<spring:message code="step.delete" />"
+			onclick="return confirm('<spring:message code="step.confirm.delete" />')" />&nbsp;
 	</jstl:if>
 	<input type="button" name="cancel"
-		value="<spring:message code="contest.cancel" />"
-		onclick="javascript: relativeRedir('contest/list.do');" />
+		value="<spring:message code="step.cancel" />"
+		onclick="javascript: relativeRedir('recipe/list.do');" />
 	<br />
-
-	
 
 </form:form>
