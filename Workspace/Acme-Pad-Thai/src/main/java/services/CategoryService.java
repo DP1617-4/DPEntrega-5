@@ -7,6 +7,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import repositories.CategoryRepository;
 import domain.Category;
@@ -47,7 +48,7 @@ public class CategoryService {
 			}
 			
 			public void delete(Category category){
-				
+				Assert.isTrue(category.getRecipes().isEmpty(),"Solo pueden borrarse categorías sin recetas.");
 				categoryRepository.delete(category);
 				
 			}
@@ -55,7 +56,7 @@ public class CategoryService {
 			//Other Bussiness Methods
 			
 			public Category delete2(Category category){
-				
+				Assert.isTrue(category.getRecipes().isEmpty(),"Solo pueden borrarse categorías sin recetas.");
 				category.setDeleted(true);
 				Category saved = this.save(category);
 				return saved;

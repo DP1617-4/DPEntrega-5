@@ -4,6 +4,7 @@ Servers
 Scrapbook
 *.class
 
+
 # Evitar subir cosas de Dolphin (Linux-KDE)
 .directory 
 
@@ -15,6 +16,12 @@ Scrapbook
 !SampleWorkspace_1.6/.metadata/
 !SampleWorkspace_1.6/Servers
 !SampleWorkspace_1.6/Scrapbook
+
+#Ignorar ciertas carpetas
+
+.metadata/
+Servers/
+Scrapbook/
 
 
 target/
