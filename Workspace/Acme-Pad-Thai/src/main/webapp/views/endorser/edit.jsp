@@ -13,6 +13,7 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
+	<form:hidden path="curricula" />
 	
 	<form:label path="name">
 		<spring:message code="endorser.name" />:
