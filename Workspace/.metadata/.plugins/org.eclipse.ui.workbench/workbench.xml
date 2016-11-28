@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="87" version="2.0">
+<workbench progressCount="70" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="951" x="320" y="75">
 <fastViewData fastViewLocation="1024"/>
@@ -17,11 +17,10 @@
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="39" y="22"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="39" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="62" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="183" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -31,9 +30,9 @@
 <coolItem id="org.eclipse.datatools.sqltools.data.internal.ui.editor.tableDataEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jpt.jpa.ui.internal.editors.PersistenceEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.m2e.editor.MavenPomEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -51,21 +50,20 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" partName="display.jsp" path="Z:/DPEntrega-5/Workspace/Acme-Pad-Thai/src/main/webapp/views/Nutritionist/display.jsp" title="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/Nutritionist/display.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme-Pad-Thai/src/main/webapp/views/Nutritionist/display.jsp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1768" selectionTopPixel="333"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SystemConfiguration.java" partName="SystemConfiguration.java" path="Z:/Repositories/DPEntrega-5/Workspace/Acme-Pad-Thai/src/main/java/domain/SystemConfiguration.java" title="SystemConfiguration.java" tooltip="Acme-Pad-Thai/src/main/java/domain/SystemConfiguration.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme-Pad-Thai/src/main/java/domain/SystemConfiguration.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="572" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" partName="display.jsp" path="Z:/DPEntrega-5/Workspace/Acme-Pad-Thai/src/main/webapp/views/User/display.jsp" title="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/User/display.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme-Pad-Thai/src/main/webapp/views/User/display.jsp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1460" selectionTopPixel="214"/>
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" partName="display.jsp" path="Z:/Repositories/DPEntrega-5/Workspace/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/display.jsp" title="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/display.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/display.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1026" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="list.jsp" partName="list.jsp" path="Z:/DPEntrega-5/Workspace/Acme-Pad-Thai/src/main/webapp/views/endorser/list.jsp" title="list.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/endorser/list.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme-Pad-Thai/src/main/webapp/views/endorser/list.jsp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="770" selectionTopPixel="180"/>
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" partName="edit.jsp" path="Z:/Repositories/DPEntrega-5/Workspace/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/edit.jsp" title="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/edit.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/edit.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="24" selectionOffset="1227" selectionTopPixel="165"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jst.jsp.core.jspsource.source" name="list.jsp" partName="list.jsp" path="Z:/DPEntrega-5/Workspace/Acme-Pad-Thai/src/main/webapp/views/User/list.jsp" title="list.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/User/list.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme-Pad-Thai/src/main/webapp/views/User/list.jsp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="tiles_es.xml" partName="tiles_es.xml" path="Z:/Repositories/DPEntrega-5/Workspace/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/tiles_es.xml" title="tiles_es.xml" tooltip="Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/tiles_es.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/tiles_es.xml"/>
 </editor>
 </editors>
 <views>
@@ -113,7 +111,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (100 items)"/>
+<category IMemento.internal.id="Warnings (100 of 132 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="219" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -130,7 +128,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jst.jsp.core.jspsource.source" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspectives activePart="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -229,8 +227,8 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@4c02bc48" ratio="0.68875" ratioLeft="551" ratioRight="249" relationship="4" relative="org.eclipse.ui.internal.ViewStack@5c6ae889">
-<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4c02bc48" ratio="0.8208955" ratioLeft="660" ratioRight="144" relationship="4" relative="org.eclipse.ui.internal.ViewStack@5c6ae889">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
@@ -257,7 +255,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1d14958a" ratio="0.43506494" ratioLeft="335" ratioRight="435" relationship="2" relative="org.eclipse.ui.internal.ViewStack@4c02bc48">
-<folder activePageID="org.eclipse.ui.views.ProgressView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
@@ -302,163 +300,166 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/message/list.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/endorser/list.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/Curricula/display.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/Nutritionist/display.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/Curricula/display.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/Nutritionist/edit.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/User/display.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/User/list.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/sponsor/display.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/creditCard/edit.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/edit.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme-Pad-Thai/src/main/java/domain/SystemConfiguration.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/display.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/creditCard/display.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/Acme-Pad-Thai/src/main/webapp/views/campaign/list.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/Acme-Pad-Thai/src/main/webapp/views/creditCard/messages_es.properties"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/Acme-Pad-Thai/src/main/webapp/views/folder/messages_es.properties"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/messages_es.properties"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/messages.properties"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/messages.properties"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/tiles_es.xml"/>
 </editors>
-<item historyLabel="list.jsp" index="0">
-<position info="not_deleted" x="2309" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1598" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="2">
-<position info="not_deleted" x="1411" y="27"/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1518" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="4">
-<position/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1621" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="4">
-<position/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1856" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="4">
-<position/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1914" y="0"/>
-</item>
-<item historyLabel="edit.jsp" index="5">
-<position info="not_deleted" x="2433" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="4">
-<position/>
-</item>
-<item historyLabel="edit.jsp" index="5">
-<position info="not_deleted" x="2433" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1914" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="6">
+<item historyLabel="edit.jsp" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1914" y="0"/>
+<item historyLabel="list.jsp" index="6">
+<position info="not_deleted" x="1034" y="0"/>
 </item>
-<item historyLabel="display.jsp" index="6">
+<item historyLabel="display.jsp" index="5">
+<position info="not_deleted" x="681" y="0"/>
+</item>
+<item historyLabel="list.jsp" index="6">
+<position info="not_deleted" x="946" y="0"/>
+</item>
+<item historyLabel="display.jsp" index="5">
+<position info="not_deleted" x="594" y="188"/>
+</item>
+<item historyLabel="list.jsp" index="6">
+<position info="not_deleted" x="946" y="0"/>
+</item>
+<item historyLabel="edit.jsp" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1798" y="116"/>
+<item historyLabel="list.jsp" index="6">
+<position info="not_deleted" x="946" y="0"/>
 </item>
-<item historyLabel="display.jsp" index="6">
-<position info="not_deleted" x="1509" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1422" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="6">
-<position info="not_deleted" x="1509" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1826" y="31"/>
-</item>
-<item historyLabel="display.jsp" index="6">
-<position info="not_deleted" x="1490" y="0"/>
-</item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="1489" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="4">
+<item historyLabel="display.jsp" index="0">
 <position/>
 </item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="1489" y="0"/>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="917" y="30"/>
 </item>
-<item historyLabel="display.jsp" index="6">
-<position info="not_deleted" x="1547" y="0"/>
+<item historyLabel="SystemConfiguration.java" index="3">
+<position info="not_deleted" x="541" y="8"/>
+</item>
+<item historyLabel="display.jsp" index="0">
+<position/>
+</item>
+<item historyLabel="SystemConfiguration.java" index="3">
+<position info="not_deleted" x="572" y="0"/>
 </item>
 <item historyLabel="display.jsp" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="1541" y="0"/>
 </item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="4">
-<position info="not_deleted" x="1381" y="0"/>
-</item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1678" y="97"/>
-</item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="1261" y="0"/>
+<item historyLabel="edit.jsp" index="2">
+<position info="not_deleted" x="796" y="8"/>
 </item>
 <item historyLabel="display.jsp" index="4">
-<position info="not_deleted" x="1381" y="0"/>
+<position info="not_deleted" x="1915" y="0"/>
 </item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="1261" y="0"/>
+<item historyLabel="display.jsp" index="0">
+<position info="not_deleted" x="1528" y="107"/>
 </item>
-<item historyLabel="display.jsp" index="6">
-<position info="not_deleted" x="1547" y="0"/>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="2064" y="0"/>
 </item>
-<item historyLabel="edit.jsp" index="5">
-<position info="not_deleted" x="2433" y="0"/>
+<item historyLabel="display.jsp" index="0">
+<position info="not_deleted" x="1528" y="107"/>
 </item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1678" y="97"/>
+<item historyLabel="edit.jsp" index="2">
+<position info="not_deleted" x="1451" y="0"/>
 </item>
-<item historyLabel="edit.jsp" index="5">
-<position info="not_deleted" x="2433" y="0"/>
+<item historyLabel="messages_es.properties" index="7"/>
+<item historyLabel="edit.jsp" index="2">
+<position info="not_deleted" x="1451" y="0"/>
 </item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1678" y="97"/>
+<item historyLabel="display.jsp" index="0">
+<position/>
 </item>
-<item historyLabel="display.jsp" index="6">
-<position info="not_deleted" x="1547" y="0"/>
+<item historyLabel="messages_es.properties" index="8">
+<position info="not_deleted" x="254" y="303"/>
 </item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="1261" y="0"/>
+<item historyLabel="display.jsp" index="0">
+<position/>
 </item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1678" y="97"/>
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="454" y="0"/>
 </item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="1261" y="0"/>
+<item historyLabel="messages.properties" index="10">
+<position info="not_deleted" x="554" y="0"/>
 </item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1678" y="97"/>
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="454" y="0"/>
 </item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="1261" y="0"/>
+<item historyLabel="messages.properties" index="10">
+<position info="not_deleted" x="554" y="0"/>
 </item>
-<item historyLabel="display.jsp" index="3">
-<position info="not_deleted" x="1768" y="0"/>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="1513" y="24"/>
 </item>
-<item historyLabel="list.jsp" index="1">
-<position info="not_deleted" x="770" y="0"/>
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="367" y="0"/>
 </item>
-<item historyLabel="display.jsp" index="6">
-<position info="not_deleted" x="1460" y="0"/>
+<item historyLabel="messages.properties" index="10">
+<position info="not_deleted" x="554" y="0"/>
 </item>
-<item active="true" historyLabel="list.jsp" index="7">
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="367" y="0"/>
+</item>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="1634" y="28"/>
+</item>
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="337" y="0"/>
+</item>
+<item historyLabel="edit.jsp" index="2">
+<position info="not_deleted" x="1227" y="24"/>
+</item>
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="452" y="0"/>
+</item>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="2064" y="0"/>
+</item>
+<item historyLabel="edit.jsp" index="2">
+<position info="not_deleted" x="1227" y="24"/>
+</item>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="1009" y="0"/>
+</item>
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="452" y="0"/>
+</item>
+<item historyLabel="messages.properties" index="11">
+<position/>
+</item>
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="452" y="0"/>
+</item>
+<item historyLabel="edit.jsp" index="2">
+<position info="not_deleted" x="1227" y="24"/>
+</item>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="1009" y="0"/>
+</item>
+<item historyLabel="messages.properties" index="11">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="1009" y="0"/>
+</item>
+<item historyLabel="messages_es.properties" index="9">
+<position info="not_deleted" x="337" y="0"/>
+</item>
+<item historyLabel="display.jsp" index="4">
+<position info="not_deleted" x="1026" y="0"/>
+</item>
+<item active="true" historyLabel="tiles_es.xml" index="12">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
@@ -479,50 +480,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="list.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/User/list.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/User/list.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="tiles_es.xml" tooltip="Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/tiles_es.xml">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/tiles_es.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="list.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/endorser/list.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/endorser/list.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="messages.properties" tooltip="Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/messages.properties">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/messages.properties"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/Curricula/display.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/Curricula/display.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="messages_es.properties" tooltip="Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/messages_es.properties">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/messages_es.properties"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/User/display.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/User/display.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="messages_es.properties" tooltip="Acme-Pad-Thai/src/main/webapp/views/folder/messages_es.properties">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/folder/messages_es.properties"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/Nutritionist/edit.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/Nutritionist/edit.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="messages_es.properties" tooltip="Acme-Pad-Thai/src/main/webapp/views/creditCard/messages_es.properties">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/creditCard/messages_es.properties"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/Nutritionist/display.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/Nutritionist/display.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/sponsor/display.jsp">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/sponsor/display.jsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/endorser/edit.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/endorser/edit.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/edit.jsp">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/edit.jsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/Curricula/edit.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/Curricula/edit.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="list.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/campaign/list.jsp">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/campaign/list.jsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/recipe/display.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/recipe/display.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/creditCard/edit.jsp">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/creditCard/edit.jsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="list.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/message/list.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/message/list.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="display.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/creditCard/display.jsp">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/creditCard/display.jsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/message/edit.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/message/edit.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="list.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/list.jsp">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/systemConfiguration/list.jsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="list.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/folder/list.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/folder/list.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/sponsor/edit.jsp">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/sponsor/edit.jsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/contest/edit.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/contest/edit.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SystemConfiguration.java" tooltip="Acme-Pad-Thai/src/main/java/domain/SystemConfiguration.java">
+<persistable path="/Acme-Pad-Thai/src/main/java/domain/SystemConfiguration.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/User/edit.jsp">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/User/edit.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="messages.properties" tooltip="Acme-Pad-Thai/src/main/webapp/views/bill/messages.properties">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/bill/messages.properties"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="messages.properties" tooltip="Acme-Pad-Thai/src/main/webapp/views/endorser/messages.properties">
-<persistable path="/Acme-Pad-Thai/src/main/webapp/views/endorser/messages.properties"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="edit.jsp" tooltip="Acme-Pad-Thai/src/main/webapp/views/bill/edit.jsp">
+<persistable path="/Acme-Pad-Thai/src/main/webapp/views/bill/edit.jsp"/>
 </file>
 </mruList>
 </workbench>

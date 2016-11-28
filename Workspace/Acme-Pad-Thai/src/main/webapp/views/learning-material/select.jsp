@@ -18,8 +18,19 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+
+<spring:message code="learningMaterial.select.header"/>
 <form:form action="learningMaterial/select.do" modelAttribute="selectMaterial">
 
-<form:select path=""></form:select>
+	
+	<form:select path="selected">
+		<form:option value="0" label="---"/>
+		<form:option value="1" label="Presentation"/>
+		<form:option value="2" label="Text"/>
+		<form:option value="3" label="Video"/>
+	</form:select>
+	
+	<input type="submit" name="type"
+	value ="<spring:message code="learningMaterial.select"/>" />
 
 </form:form>
