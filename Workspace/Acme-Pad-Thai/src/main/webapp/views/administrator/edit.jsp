@@ -21,6 +21,7 @@
 	<form:hidden path="id" />
 	<form:hidden path="version" />
 	<form:hidden path="userAccount.authorities" />
+	<form:hidden path="folders"/>
 	
 	<form:label path="name">
 		<spring:message code="administrator.name" />:
@@ -57,18 +58,6 @@
 	<form:errors cssClass="error" path="phone" />
 	<br />
 	
-	<!-- Folders -->
-	
-	<spring:message code="administrator.folder.name" var="nameHeader" />
-	<display:column property="name" title="${nameHeader}" sortable="false" />
-	
-	<display:column>
-		<a href="folder/remove.do?folderId=${row.id}"><spring:message code="administrator.folder.remove"/></a>
-	</display:column>
-	
-	<display:column>
-		<a href="folder/create.do"><spring:message code="administrator.folder.create"/></a>
-	</display:column>
 	
 	
 	<jstl:if test="${administrator.id == 0}">

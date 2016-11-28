@@ -31,14 +31,14 @@ name="user data" requestURI="${requestURI}" id="row">
 </display:table>
 <br/>
 
-<input type="button" name="view-recipes"
-value="<spring:message code="recipes.list" />"
-onclick="javascript: relativeRedir('recipe/list.do');" />
+	<a href="recipe/list.do"> <spring:message
+			code="user.recipes.list" />
+	</a>
 
 <br/>
 
-<input type="button" name="edit user"
-value="<spring:message code="user.edit" />"
-onclick="javascript: relativeRedir('user/edit.do');" />
+<a href="user/edit.do?userId=${requestURI.id}"> <spring:message
+			code="user.edit" />
+</a>
 
 <br/>

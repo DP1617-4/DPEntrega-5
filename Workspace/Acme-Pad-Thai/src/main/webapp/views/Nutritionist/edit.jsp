@@ -12,6 +12,11 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
+	<form:hidden path="scores" />
+	<form:hidden path="folders" />
+	<form:hidden path="socialIdentities" />
+	<form:hidden path="enrolled" />
+	<form:hidden path="userAccount" />
 	
 	<form:label path="name">
 		<spring:message code="nutritionist.name" />:

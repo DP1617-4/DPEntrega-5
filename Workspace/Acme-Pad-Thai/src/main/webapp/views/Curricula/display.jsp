@@ -28,14 +28,9 @@ name="user data" requestURI="${requestURI}" id="row">
 </display:table>
 <br/>
 
-<input type="button" name="view-endorsers"
-value="<spring:message code="curricula.endorser.list" />"
-onclick="javascript: relativeRedir('endorser/list.do');" />
-
+<a href="endorser/list.do"> 
+<spring:message code="curricula.endorser.list" />
+</a>
 <br/>
-
-<input type="button" name="edit-curricula"
-value="<spring:message code="curricula.edit" />"
-onclick="javascript: relativeRedir('curricula/edit.do');" />
 
 <br/>
