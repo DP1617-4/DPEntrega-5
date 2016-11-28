@@ -16,5 +16,14 @@
        
 <tiles-definitions>
 
+	<definition name="creditCard/display" extends="master.page">	
+		<put-attribute name="title" value="Ver tarjeta de crédito" />
+		<put-attribute name="body" value="/views/creditCard/display.jsp" />
+	</definition>
+	
+	<definition name="creditCard/edit" extends="master.page">	
+		<put-attribute name="title" value="Editar tarjeta de crédito" />
+		<put-attribute name="body" value="/views/creditCard/dedit.jsp" />
+	</definition>
 		
 </tiles-definitions>

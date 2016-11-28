@@ -16,4 +16,14 @@
        
 <tiles-definitions>
 		
+	<definition name="systemConfiguration/display" extends="master.page">	
+		<put-attribute name="title" value="Display configuration" />
+		<put-attribute name="body" value="/views/systemConfiguration/display.jsp" />
+	</definition>
+	
+	<definition name="systemConfiguration/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit configuration" />
+		<put-attribute name="body" value="/views/systemConfiguration/edit.jsp" />
+	</definition>
+		
 </tiles-definitions>

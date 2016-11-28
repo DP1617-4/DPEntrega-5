@@ -26,6 +26,16 @@
 	</div>
 </security:authorize>
 
+<p><spring:message code="campaign.banners" />
+<jstl:set var="loggedsponsor" value=<security:authentication property="principal.username" />/>
+<jstl:set var="campaignsponsor" value="${campaign.sponsor}"/> 
+<jstl:if test="${campaignsponsor.userAccount==loggedsponsor}">
+	<a href="campaign/addbanners.do?campaignId=${campaign.id}">
+		<spring:message	code="campaign.addbanners" />
+	</a>
+</jstl:if>
+</p>
+
 <display:table pagesize="5" class="displaytag" keepStatus="true"
 	name="campaigns" requestURI="campaign/list.do" id="row">
 	<jstl:set var="loggedsponsor" value=<security:authentication property="principal.username" /> />
@@ -48,6 +58,11 @@
 
 	<spring:message code="campaign.starred" var="starredHeader" />
 	<display:column property="starred" title="${starredHeader}" sortable="true" />
+	
+	<spring:message code="campaign.banner" var="bannerHeader" />
+	<display:column property="banner" title="${bannerHeader}" sortable="false" />
+	<a href="banner/list.do"> <spring:message code="campaign.banner.list" /> </a>
+	
 </display:table>
 
 <div>
