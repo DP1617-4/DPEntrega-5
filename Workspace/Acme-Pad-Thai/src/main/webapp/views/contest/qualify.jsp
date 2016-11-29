@@ -19,25 +19,18 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-<form:form action="contest/edit.do" modelAttribute="contest">
+<form:form action="contest/qualify.do" modelAttribute="selectMaterial">
 
-	<form:hidden path="id" />
-	<form:hidden path="version" />
-	<form:hidden path="recipes"/>
-	<form:hidden path="title"/>
-	<form:hidden path="openingTime"/>
-	<form:hidden path="closingTime"/>
-	<form:hidden path="winners"/>
-	<form:hidden path="deleted"/>
 
-	<form:label path="qualified">
+
+	<form:label path="selected">
 		<spring:message code="contest.qualify.recipe" />:
 	</form:label>
-	<form:select id="recipes" path="recipe" >
+	<form:select id="recipes" path="selected" >
 		<form:option value="0" label="----"/>
-		<form:options items="${recipe}" itemValue="id" itemLabel="name"/>
+		<form:options items="${recipes}" itemValue="id" itemLabel="name"/>
 	</form:select>
-	<form:errors cssClass="error" path="qualified" />
+	<form:errors cssClass="error" path="selected" />
 	<br />
 
 

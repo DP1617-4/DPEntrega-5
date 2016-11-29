@@ -18,25 +18,13 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<security:authorize access="hasRole('ADMIN')">
-	<div>
-		<a href="systemConfiguration/display.do"> 
-			<spring:message code="systemConfiguration.list.own" />
-		</a>
-	</div>
-</security:authorize>
 
 <display:table pagesize="5" class="displaytag" keepStatus="true"
-	name="systemConfigurations" requestURI="systemConfiguration" id="row">
-	<jstl:set var="loggedadmin" value=<security:authentication property="principal.username" /> />
-	<jstl:set var="admin" value="${row.user}"/>
-	 
+	name="systemConfigurations" requestURI="systemConfiguration/display.do" id="row">	 
 	<display:column>
-		<jstl:if test="${admin.userAccount==loggedadmin}">
 			<a href="systemConfiguration/edit.do?systemConfigurationId=${row.id}">
 				<spring:message	code="systemConfiguration.edit" />
 			</a>
-		</jstl:if>
 	</display:column>
 	
 	<!-- Attributes -->
@@ -48,6 +36,3 @@
 	
 </display:table>
 
-<input type="button" name="edit systemConfiguration"
-onclick="javascript: relativeRedir('systemConfiguration/edit.do');" />
-<br/>

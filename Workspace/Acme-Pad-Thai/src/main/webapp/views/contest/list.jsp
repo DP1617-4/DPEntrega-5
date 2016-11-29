@@ -22,13 +22,13 @@
 	name="contests" requestURI="${requestURI}" id="row">
 
 	<!-- Action links -->
-
-	<display:column>
-			<a href="contest/edit.do?contestId=${row.id}">
-				<spring:message	code="contest.edit" />
-			</a>
-	</display:column>
-	
+	<security:authorize access="hasRole('ADMIN')">
+		<display:column>
+				<a href="contest/edit.do?contestId=${row.id}">
+					<spring:message	code="contest.edit" />
+				</a>
+		</display:column>
+	</security:authorize>
 	<display:column>
 		<a href="contest/qualify.do?contestId=${row.id}">
 			<spring:message	code="contest.qualify" />
@@ -54,9 +54,10 @@
 </display:table>
 
 	<!-- Action links -->
-
-<div>
-	<a href="contest/create.do"> <spring:message
-			code="contest.create" />
-	</a>
-</div>
+<security:authorize access="hasRole('ADMIN')">
+	<div>
+		<a href="contest/create.do"> <spring:message
+				code="contest.create" />
+		</a>
+	</div>
+</security:authorize>

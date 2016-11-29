@@ -21,6 +21,10 @@
 <display:table pagesize="5" class="displaytag" keepStatus="true"
 	name="categories" requestURI="${requestURI}" id="row">
 	
+	<display:column>
+		<a href="admin/category/edit.do?categoryId=${row.id}" ><spring:message code="category.edit"/> </a>
+	</display:column>
+	
 	<!-- Attributes -->
 	
 	<spring:message code="category.name" var="nameHeader" />
@@ -37,7 +41,9 @@
 	</display:column>
 	<spring:message code="category.sons" var="sonsHeader"/>
 	<display:column title="${sonsHeader}">
-		<a href="category/display.do?categoryId=${row.sons.id}"><spring:message code="category.sons"/> </a>
+		<jstl:forEach items="${row.sons}" var="son">
+			<a href="category/display.do?categoryId=${son.id}"><jstl:out value="${son.name}"/> </a>
+		</jstl:forEach>
 	</display:column>
 	
 </display:table>

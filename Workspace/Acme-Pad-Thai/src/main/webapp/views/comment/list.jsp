@@ -38,16 +38,12 @@
 		<a href="socialUser/display.do?socialUserId=${row.socialUser.id}"><spring:message
 				code="comment.socialUser"/> </a>
 	</display:column>
+	
+	<display:column>
+		<a href="recipe/display.do?recipeId=${row.id}"><spring:message
+			code="comment.recipe" /></a>
+	</display:column>
 
 </display:table>
 
-<!-- Action links -->
-<div>
-	<a href="recipe/display.do?recipeId=${row.id}"><spring:message
-			code="comment.recipe" /></a>
-</div>
 
-<div>
-	<a href="comment/create.do"> <spring:message code="comment.create" />
-	</a>
-</div>

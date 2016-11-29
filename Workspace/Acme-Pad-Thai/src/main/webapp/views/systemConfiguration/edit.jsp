@@ -12,12 +12,11 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="admin"/>
 	
 	<form:label path="keywords">
 		<spring:message code="systemConfiguration.keywords" />:
 	</form:label>
-	<form:input path="keywords" />
+	<form:textarea path="keywords" />
 	<form:errors cssClass="error" path="keywords" />
 	<br />
 	
