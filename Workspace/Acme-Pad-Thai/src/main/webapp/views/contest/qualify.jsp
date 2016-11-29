@@ -19,7 +19,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-<form:form action="contest/qualify.do" modelAttribute="selectMaterial">
+<form:form action="contest/qualify.do" modelAttribute="SelectMaterial">
 
 
 
