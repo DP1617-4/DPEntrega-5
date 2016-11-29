@@ -35,20 +35,28 @@
 	<form:label path="unit">
 		<spring:message code="recipe.unit" />:
 	</form:label>
-	<form:input path="unit" />
+	<form:select path="unit">
+                <form:option value="grams"><spring:message code="recipe.grams" /></form:option>
+                <form:option value="kilograms"><spring:message code="recipe.kilograms" /></form:option>
+                <form:option value="ounces"><spring:message code="recipe.ounces" /></form:option>
+                <form:option value="pounds"><spring:message code="recipe.pounds" /></form:option>
+                <form:option value="millilitres"><spring:message code="recipe.millilitres" /></form:option>
+                <form:option value="litres"><spring:message code="recipe.litres" /></form:option>
+                <form:option value="spoons"><spring:message code="recipe.spoons" /></form:option>
+                <form:option value="cups"><spring:message code="recipe.cups" /></form:option>
+                <form:option value="pieces"><spring:message code="recipe.pieces" /></form:option>
+            </form:select>
 	<form:errors cssClass="error" path="unit" />
 		
 	<br/>
 	
 	
 	<input type="submit" name="save"
-	value="<spring:message code="recipe.save" />" 
-	onclick="javascript: relativeRedir('recipe/display.do?recipeId=${recipe.id}');" />&nbsp; 	
+	value="<spring:message code="recipe.save" />"/>&nbsp; 	
 
 	
 	<input type="button" name="cancel"
-		value="<spring:message code="recipe.cancel" />"
-		onclick="javascript: relativeRedir('recipe/display.do?recipeId=${recipe.id}');" />&nbsp;
+		value="<spring:message code="recipe.cancel" />"/>&nbsp;
 	<br />
 
 	

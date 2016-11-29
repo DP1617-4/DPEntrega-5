@@ -18,55 +18,38 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="recipe/edit.do" modelAttribute="recipe">
+<form:form action="ingredient/edit.do" modelAttribute="ingredient">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="user"/>
-	<form:hidden path="ticker"/>
+	<form:hidden path="quantity"/>
 	<form:hidden path="deleted"/>
-	<form:hidden path="score"/>
-	<form:hidden path="authored"/>
-	<form:hidden path="updated"/>
-	<form:hidden path="scores"/>
-	<form:hidden path="steps"/>
-	<form:hidden path="contest"/>
-	<form:hidden path="wonContest"/>
-	<form:hidden path="comments"/>
-	<form:hidden path="categories"/>
-	<form:hidden path="quantities"/>
+	<form:hidden path="value"/>
 	<form:hidden path="pictures"/>
 
-	<form:label path="title">
-		<spring:message code="recipe.title" />:
+	<form:label path="name">
+		<spring:message code="ingredient.name" />:
 	</form:label>
-	<form:input path="title" />
-	<form:errors cssClass="error" path="title" />
+	<form:input path="name" />
+	<form:errors cssClass="error" path="name" />
 	<br />
 	
-	<form:label path="summary">
-		<spring:message code="recipe.summary" />:
+	<form:label path="description">
+		<spring:message code="ingredient.description" />:
 	</form:label>
-	<form:textarea path="summary" />
-	<form:errors cssClass="error" path="summary" />
-	<br />
-	
-	<form:label path="hints">
-		<spring:message code="recipe.hints" />:
-	</form:label>
-	<form:input path="hints" />
-	<form:errors cssClass="error" path="hints" />
+	<form:textarea path="description" />
+	<form:errors cssClass="error" path="description" />
 	<br />
 
 	<input type="submit" name="save"
-	value="<spring:message code="recipe.save" />" />&nbsp; 
+	value="<spring:message code="ingredient.save" />" />&nbsp; 
 			
-	<jstl:if test="${recipe.id != 0}">
+	<jstl:if test="${ingredient.id != 0}">
 		<input type="submit" name="delete"
-			value="<spring:message code="recipe.delete" />"/>&nbsp;
+			value="<spring:message code="ingredient.delete" />"/>&nbsp;
 	</jstl:if>
 	<input type="button" name="cancel"
-		value="<spring:message code="recipe.cancel" />"/>&nbsp;
+		value="<spring:message code="ingredient.cancel" />"/>&nbsp;
 	<br />
 
 	
