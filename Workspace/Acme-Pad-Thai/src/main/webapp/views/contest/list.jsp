@@ -41,12 +41,12 @@
 	
 	<spring:message code="contest.openingTime" var="openingTimeHeader" />
 	<display:column title="${openingTimeHeader}" sortable="true" >
-		<jstl:out value="<fmt:formatDate value="${row.openingTime}"pattern ="dd/mm/yyyy"/>" />
+		<fmt:formatDate value="${row.openingTime}"pattern ="dd/mm/yyyy"/>
 	</display:column>
 	
 	<spring:message code="contest.closingTime" var="closingTimeHeader" />
 	<display:column title="${closingTimeHeader}" sortable="true" >
-		<jstl:out value="<fmt:formatDate value="${row.closingTime}"pattern ="dd/mm/yyyy"/>" />
+		<fmt:formatDate value="${row.closingTime}"pattern ="dd/mm/yyyy"/>
 	</display:column>
 	
 	<spring:message code="contest.qualified" var="qualifiedHeader"/>

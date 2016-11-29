@@ -63,14 +63,11 @@
 	</display:column>
 	
 	<spring:message code="recipe.authored" var="authoredHeader" />
-	<display:column title="${authoredHeader}" sortable="true" >
-		<jstl:out value="<fmt:formatDate value="${row.authored}"pattern ="dd/mm/yyyy"/>" />
-	</display:column>
+	<display:column title="${authoredHeader}" sortable="true" format="{0,date,dd/MM/yyyy HH:mm}"/>
+	
 	
 	<spring:message code="recipe.updated" var="updatedHeader" />
-	<display:column title="${updatedHeader}" sortable="true" >
-		<jstl:out value="<fmt:formatDate value="${row.updated}"pattern ="dd/mm/yyyy"/>" />
-	</display:column>
+	<display:column title="${updatedHeader}" sortable="true" format="{0,date,dd/MM/yyyy HH:mm}" />
 	
 	<spring:message code="recipe.score" var="scoreHeader" />
 	<display:column property="score" title="${scoreHeader}" sortable="false" />

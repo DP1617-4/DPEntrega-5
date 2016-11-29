@@ -36,12 +36,12 @@
 	<!-- Attributes -->
 	<spring:message code="bill.creationDate" var="creationDateHeader" />
 	<display:column title="${creationDateHeader}" sortable="true" >
-		<jstl:out value="<fmt:formatDate value="${row.creationDate}" pattern="dd/mm/yyyy" />" />
+		<fmt:formatDate value="${row.creationDate}" pattern="dd/mm/yyyy" />
 	</display:column>
 
 	<spring:message code="bill.paymentDate" var="paymentDateHeader" />
 	<display:column title="${paymentDateHeader}" sortable="true" >
-		<jstl:out value="<fmt:formatDate value="${row.paymentDate }" pattern="dd/mm/yyyy" />" />
+		<fmt:formatDate value="${row.paymentDate }" pattern="dd/mm/yyyy" />
 	</display:column>
 	
 	<spring:message code="bill.cost" var="costHeader" />
