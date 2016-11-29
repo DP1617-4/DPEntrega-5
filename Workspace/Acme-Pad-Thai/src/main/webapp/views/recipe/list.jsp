@@ -28,6 +28,18 @@
 </security:authorize>
 
 
+<spring:message code="recipe.filter"/>
+<form:form action="recipe/filter.do" modelAttribute="FilterString">
+
+	
+	<form:input path="filter"/>
+	
+	<input type="submit" name="type"
+	value ="<spring:message code="reipe.filter.button"/>" />
+
+</form:form>
+
+
 
 <display:table pagesize="10" class="displaytag" keepStatus="true"
 	name="recipe" requestURI="${requestURI}" id="row">
@@ -51,10 +63,14 @@
 	</display:column>
 	
 	<spring:message code="recipe.authored" var="authoredHeader" />
-	<display:column property="authored" title="${authoredHeader}" sortable="true" />
+	<display:column title="${authoredHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.authored}"pattern ="dd/mm/yyyy"/>" />
+	</display:column>
 	
 	<spring:message code="recipe.updated" var="updatedHeader" />
-	<display:column property="updated" title="${updatedHeader}" sortable="true" />
+	<display:column title="${updatedHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.updated}"pattern ="dd/mm/yyyy"/>" />
+	</display:column>
 	
 	<spring:message code="recipe.score" var="scoreHeader" />
 	<display:column property="score" title="${scoreHeader}" sortable="false" />

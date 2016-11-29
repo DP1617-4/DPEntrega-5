@@ -38,10 +38,17 @@
 	
 	<spring:message code="contest.title" var="titleHeader" />
 	<display:column property="title" title="${titleHeader}" sortable="true" />
+	
 	<spring:message code="contest.openingTime" var="openingTimeHeader" />
-	<display:column property="openingTime" title="${openingTimeHeader}" sortable="true" />
+	<display:column title="${openingTimeHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.openingTime}"pattern ="dd/mm/yyyy"/>" />
+	</display:column>
+	
 	<spring:message code="contest.closingTime" var="closingTimeHeader" />
-	<display:column property="closingTime" title="${closingTimeHeader}" sortable="true" />
+	<display:column title="${closingTimeHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.closingTime}"pattern ="dd/mm/yyyy"/>" />
+	</display:column>
+	
 	<spring:message code="contest.qualified" var="qualifiedHeader"/>
 	<display:column title="${qualifiedHeader}">
 		<a href="contest/display.do?recipeId=${row.qualified.id}"><spring:message code="contest.qualified"/> </a>
