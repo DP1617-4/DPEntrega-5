@@ -20,7 +20,7 @@
 
 
 <spring:message code="learningMaterial.select.header"/>
-<form:form action="learningMaterial/select.do" modelAttribute="selectMaterial">
+<form:form action="learningMaterial/select.do" modelAttribute="SelectMaterial">
 
 	
 	<form:select path="selected">

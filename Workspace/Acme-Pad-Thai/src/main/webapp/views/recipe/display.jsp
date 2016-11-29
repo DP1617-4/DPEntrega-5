@@ -23,8 +23,8 @@
 <br/>
 <p><jstl:out value="${recipe.summary}"/></P>
 <p><jstl:out value="${recipe.ticker}"/></P>
-<P><spring:message code="recipe.authored"/><jstl:out value="${recipe.authored}"/></P>
-<P><spring:message code="recipe.updated"/><jstl:out value="${recipe.updated}"/></p>
+<P><spring:message code="recipe.authored"/><jstl:out value="<fmt:formatDate value="${recipe.authored}"pattern ="dd/mm/yyyy"/>" /></P>
+<P><spring:message code="recipe.updated"/><jstl:out value="<fmt:formatDate value="${recipe.updated}"pattern ="dd/mm/yyyy"/>" /></p>
 <p><spring:message code="recipe.pictures"/></p>
 <p>
 
