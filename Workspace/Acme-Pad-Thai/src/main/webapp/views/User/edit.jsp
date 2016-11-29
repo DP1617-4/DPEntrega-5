@@ -15,7 +15,7 @@
 	<form:hidden path="scores" />
 	<form:hidden path="folders" />
 	<form:hidden path="socialIdentities" />
-	<form:hidden path="enrolled" />
+	<form:hidden path="enroled" />
 	<form:hidden path="recipes" />
 	<form:hidden path="userAccount" />
 	
