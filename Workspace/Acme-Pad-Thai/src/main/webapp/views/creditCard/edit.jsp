@@ -69,19 +69,12 @@
 		value="<spring:message code="creditCard.save" />" />&nbsp; 
 		
 	<jstl:if test="${creditCard.id != 0}">
-		<input type="submit" name="delete"
-		value="<spring:message code="creditCard.delete" />"
-		onclick="return confirm('<spring:message code="creditCard.confirm.delete" />')" />&nbsp;
+		
 		<input type="button" name="cancel"
 		value="<spring:message code="creditCard.cancel" />"
 		onclick="javascript: relativeRedir('sponsor/display.do');" />
 	</jstl:if>
 		
-	<jstl:if test="${creditCard.id == 0}">
-		<input type="button" name="cancel"
-		value="<spring:message code="creditCard.cancel" />"
-		onclick="javascript: relativeRedir('welcome/index.do');" />
-	</jstl:if>
-	<br />
+	
 	
 </form:form>

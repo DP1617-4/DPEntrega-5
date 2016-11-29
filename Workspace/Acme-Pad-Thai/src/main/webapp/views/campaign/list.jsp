@@ -27,13 +27,6 @@
 </security:authorize>
 
 <p><spring:message code="campaign.banners" />
-<jstl:set var="loggedsponsor" value=<security:authentication property="principal.username" />/>
-<jstl:set var="campaignsponsor" value="${campaign.sponsor}"/> 
-<jstl:if test="${campaignsponsor.userAccount==loggedsponsor}">
-	<a href="campaign/addbanners.do?campaignId=${campaign.id}">
-		<spring:message	code="campaign.addbanners" />
-	</a>
-</jstl:if>
 </p>
 
 <display:table pagesize="5" class="displaytag" keepStatus="true"
@@ -49,24 +42,44 @@
 		</jstl:if>
 	</display:column>
 	
+	<display:column>
+		<jstl:if test="${campaignsponsor.userAccount==loggedsponsor}">
+			<a href="banner/create.do?campaignId=${row.id}">
+				<spring:message	code="campaign.addbanners" />
+			</a>
+		</jstl:if>
+	</display:column>
+	
 	<!-- Attributes -->
 	<spring:message code="campaign.startDate" var="startDateHeader" />
-	<display:column property="startDate" title="${startDateHeader}" sortable="true" />
+	<display:column title="${startDateHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.startDate}}"pattern ="dd/mm/yyyy"/>" />
+	</display:column>
 
 	<spring:message code="campaign.endDate" var="endDateHeader" />
-	<display:column property="endDate" title="${endDateHeader}" sortable="true" />
-
+	<display:column title="${endDateHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.endDate}}"pattern ="dd/mm/yyyy"/>" />
+	</display:column>
+	
 	<spring:message code="campaign.starred" var="starredHeader" />
 	<display:column property="starred" title="${starredHeader}" sortable="true" />
 	
-	<spring:message code="campaign.banner" var="bannerHeader" />
-	<display:column property="banner" title="${bannerHeader}" sortable="false" />
-	<a href="banner/list.do"> <spring:message code="campaign.banner.list" /> </a>
 	
+	<display:column>
+		<a href="banner/list.do?campaignId=${row.id}"> <spring:message code="campaign.banner.list" /> </a>
+	</display:column>
+	
+	<security:authorize access="hasRole('ADMIN')">
+		<display:column>
+			<a href="banner/star.do?campaignId=${row.id}"><spring:message code="campaign.star" /></a>
+		</display:column>
+	</security:authorize>
 </display:table>
 
+<security:authorize access="hasRole('SPONSOR')">
 <div>
 	<a href="campaign/create.do"> <spring:message
 		code="campaign.create" />
 	</a>
 </div>
+</security:authorize>

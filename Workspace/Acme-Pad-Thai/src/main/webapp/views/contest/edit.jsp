@@ -22,7 +22,6 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="recipes"/>
 	<form:hidden path="qualified"/>
 	<form:hidden path="winners"/>
 	<form:hidden path="deleted"/>

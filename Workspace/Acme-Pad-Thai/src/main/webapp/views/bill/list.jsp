@@ -18,13 +18,7 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<security:authorize access="hasRole('SPONSOR')">
-	<div>
-		<a href="sponsor/bill/list.do"> 
-			<spring:message code="bill.list.own" />
-		</a>
-	</div>
-</security:authorize>
+
 
 <display:table pagesize="5" class="displaytag" keepStatus="true"
 	name="bills" requestURI="bill/list.do" id="row">
@@ -33,18 +27,22 @@
 	 
 	<display:column>
 		<jstl:if test="${billsponsor.userAccount==loggedsponsor}">
-			<a href="bill/edit.do?billId=${row.id}">
-				<spring:message	code="bill.edit" />
+			<a href="bill/pay.do?billId=${row.id}">
+				<spring:message	code="bill.pay" />
 			</a>
 		</jstl:if>
 	</display:column>
 	
 	<!-- Attributes -->
 	<spring:message code="bill.creationDate" var="creationDateHeader" />
-	<display:column property="creationDate" title="${creationDateHeader}" sortable="true" />
+	<display:column title="${creationDateHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.creationDate}" pattern="dd/mm/yyyy" />" />
+	</display:column>
 
 	<spring:message code="bill.paymentDate" var="paymentDateHeader" />
-	<display:column property="paymentDate" title="${paymentDateHeader}" sortable="true" />
+	<display:column title="${paymentDateHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.paymentDate }" pattern="dd/mm/yyyy" />" />
+	</display:column>
 	
 	<spring:message code="bill.cost" var="costHeader" />
 	<display:column property="cost" title="${costHeader}" sortable="true" />
