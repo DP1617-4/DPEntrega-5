@@ -9,7 +9,7 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-
+<!-- Probablemente esta vista no se use porque es identica a List y pasaremos distintos parámetros a List. -->
 
 <display:table pagesize="10" class="displaytag" keepStatus="true"
 name="category" requestURI="${requestURI}" id="row">
