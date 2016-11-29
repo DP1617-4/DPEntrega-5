@@ -28,7 +28,7 @@
 </security:authorize>
 
 <display:table pagesize="10" class="displaytag" keepStatus="true"
-	name="masterclass" requestURI="${requestURI}" id="row">
+	name="masterclasses" requestURI="${requestURI}" id="row">
 	<jstl:set var="loggedactor" value=<security:authentication property="principal.username" />/>
 	<jstl:set var="masterclasscook" value="${row.cook}"/> 
 	<jstl:if test="${masterclasscook.userAccount.id==loggedactor.id}">
@@ -56,11 +56,10 @@
 	<spring:message code="masterclass.promoted" var="promotedHeader" />
 	<display:column property="promoted" title="${promotedHeader}" sortable="true" />
 	
-	<jstl:if test="${requestURI == 'masterclass/listEnrolled.do'}">
-		<display:column>
-			<a href="learningMaterial/list.do?masterclassId=${row.id}"><spring:message code="masterclass.materials.list"/></a>
-		</display:column>
-	</jstl:if>
+	<display:column>
+		<a href="learningMaterial/list.do?masterclassId=${row.id}"><spring:message code="masterclass.materials.list"/></a>
+	</display:column>
+	
 	
 	<display:column>
 		<a href="masterclass/enrol.do"><spring:message code="masterclass.enroll"/></a>

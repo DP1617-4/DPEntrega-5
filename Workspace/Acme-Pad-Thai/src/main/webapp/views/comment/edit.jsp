@@ -35,7 +35,7 @@
 	<form:label path="text">
 		<spring:message code="comment.text" />:
 	</form:label>
-	<form:input path="text" />
+	<form:textarea path="text" />
 	<form:errors cssClass="error" path="text" />
 	<br />
 	<form:label path="stars">

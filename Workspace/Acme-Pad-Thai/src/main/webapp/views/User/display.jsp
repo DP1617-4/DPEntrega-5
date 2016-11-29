@@ -11,7 +11,10 @@
 
 
 <display:table pagesize="10" class="displaytag" keepStatus="true"
-name="user data" requestURI="${requestURI}" id="row">
+name="user" requestURI="${requestURI}" id="row">
+
+	<jstl:set var="loggedactor" value=<security:authentication property="principal.username" />/>
+	<jstl:set var="user" value="${row}"/> 
 
 	<spring:message code="user.name" var=nameHeader/>
 	<display:column property="name" title="${nameHeader}"/>
@@ -28,17 +31,25 @@ name="user data" requestURI="${requestURI}" id="row">
 	<spring:message code="user.postalAddress" var=postalAddressHeader/>
 	<display:column property="postalAddress" title="${postalAddressHeader}"/>
 	
+	<display:column>
+		<a href="recipe/list.do?userId=${row.id}"> <spring:message
+			code="user.recipes.list" />
+		</a>
+	</display:column>
+	<jstl:if test="${loggedactor == user.userAccount.username }">
+		<display:column>
+			<a href="user/edit.do?userId=${row.id}"> <spring:message
+					code="user.edit" />
+			</a>
+		</display:column>
+	</jstl:if>
 </display:table>
 <br/>
 
-	<a href="recipe/list.do"> <spring:message
-			code="user.recipes.list" />
-	</a>
+	
 
 <br/>
 
-<a href="user/edit.do?userId=${requestURI.id}"> <spring:message
-			code="user.edit" />
-</a>
+
 
 <br/>
