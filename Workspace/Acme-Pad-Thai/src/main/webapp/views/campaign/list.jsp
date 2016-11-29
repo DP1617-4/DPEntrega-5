@@ -53,12 +53,12 @@
 	<!-- Attributes -->
 	<spring:message code="campaign.startDate" var="startDateHeader" />
 	<display:column title="${startDateHeader}" sortable="true" >
-		<jstl:out value="<fmt:formatDate value="${row.startDate}}"pattern ="dd/mm/yyyy"/>" />
+		<jstl:out value="<fmt:formatDate value="${row.startDate}"pattern ="dd/mm/yyyy"/>" />
 	</display:column>
 
 	<spring:message code="campaign.endDate" var="endDateHeader" />
 	<display:column title="${endDateHeader}" sortable="true" >
-		<jstl:out value="<fmt:formatDate value="${row.endDate}}"pattern ="dd/mm/yyyy"/>" />
+		<jstl:out value="<fmt:formatDate value="${row.endDate}"pattern ="dd/mm/yyyy"/>" />
 	</display:column>
 	
 	<spring:message code="campaign.starred" var="starredHeader" />

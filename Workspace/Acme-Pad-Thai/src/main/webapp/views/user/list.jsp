@@ -10,6 +10,17 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
+<spring:message code="user.filter"/>
+<form:form action="user/filter.do" modelAttribute="FilterString">
+
+	
+	<form:input path="filter"/>
+	
+	<input type="submit" name="type"
+	value ="<spring:message code="user.filter.button"/>" />
+
+</form:form>
+
 <display:table pagesize="10" class="displaytag" keepStatus="true"
 	name="users" requestURI="${requestURI}" id="row">
 	

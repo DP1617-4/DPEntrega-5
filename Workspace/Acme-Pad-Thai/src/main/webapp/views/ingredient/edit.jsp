@@ -1,5 +1,5 @@
 <%--
- * move.jsp
+ * edit.jsp
  *
  * Copyright (C) 2016 Universidad de Sevilla
  * 
@@ -18,27 +18,38 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+<form:form action="ingredient/edit.do" modelAttribute="ingredient">
 
-<form:form action="contest/qualify.do" modelAttribute="SelectMaterial">
+	<form:hidden path="id" />
+	<form:hidden path="version" />
+	<form:hidden path="quantity"/>
+	<form:hidden path="deleted"/>
+	<form:hidden path="value"/>
+	<form:hidden path="pictures"/>
 
-
-
-	<form:label path="selected">
-		<spring:message code="contest.qualify.recipe" />:
+	<form:label path="name">
+		<spring:message code="ingredient.name" />:
 	</form:label>
-	<form:select id="recipes" path="selected" >
-		<form:option value="0" label="----"/>
-		<form:options items="${recipes}" itemValue="id" itemLabel="name"/>
-	</form:select>
-	<form:errors cssClass="error" path="selected" />
+	<form:input path="name" />
+	<form:errors cssClass="error" path="name" />
+	<br />
+	
+	<form:label path="description">
+		<spring:message code="ingredient.description" />:
+	</form:label>
+	<form:textarea path="description" />
+	<form:errors cssClass="error" path="description" />
 	<br />
 
-
 	<input type="submit" name="save"
-		value="<spring:message code="contest.save" />" />&nbsp; 
+	value="<spring:message code="ingredient.save" />" />&nbsp; 
+			
+	<jstl:if test="${ingredient.id != 0}">
+		<input type="submit" name="delete"
+			value="<spring:message code="ingredient.delete" />"/>&nbsp;
+	</jstl:if>
 	<input type="button" name="cancel"
-		value="<spring:message code="contest.cancel" />"
-		onclick="javascript: relativeRedir('contest/list.do?contestId=${contest.id}');" />
+		value="<spring:message code="ingredient.cancel" />"/>&nbsp;
 	<br />
 
 	

@@ -1,5 +1,5 @@
 <%--
- * edit.jsp
+ * list.jsp
  *
  * Copyright (C) 2016 Universidad de Sevilla
  * 
@@ -19,18 +19,28 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-<spring:message code="learningMaterial.select.header"/>
-<form:form action="learningMaterial/select.do" modelAttribute="SelectMaterial">
 
+<display:table pagesize="10" class="displaytag" keepStatus="true"
+	name="property" requestURI="${requestURI}" id="row">
+	<security:authorize access="hasRole('NUTRITIONIST')">
+		<display:column>
+			<a href="property/edit.do?propertyId=${row.id}">
+				<spring:message	code="property.edit" />
+			</a>
+		</display:column>
+	</security:authorize>
 	
-	<form:select path="selected">
-		<form:option value="0" label="---"/>
-		<form:option value="1" label="Presentation"/>
-		<form:option value="2" label="Text"/>
-		<form:option value="3" label="Video"/>
-	</form:select>
+	<!-- Attributes -->
 	
-	<input type="submit" name="type"
-	value ="<spring:message code="learningMaterial.select"/>" />
+	<spring:message code="property.name" var="nameHeader" />
+	<display:column property="name" title="${nameHeader}" sortable="true" />
+	
+</display:table>
 
-</form:form>
+<security:authorize access="hasRole('NUTRITIONIST')">
+	<div>
+		<a href="property/create.do"> <spring:message
+				code="property.create" />
+		</a>
+	</div>
+</security:authorize>

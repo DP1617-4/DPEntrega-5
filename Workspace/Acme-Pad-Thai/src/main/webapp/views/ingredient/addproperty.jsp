@@ -18,37 +18,26 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="recipe/addsteps.do" modelAttribute="step">
+<form:form action="ingredient/addproperty.do" modelAttribute="value">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="stepNumber"/>
-	<form:hidden path="recipe"/>
+	<form:hidden path="ingredient"/>
+	<form:hidden path="property"/>
 
-	<form:label path="desccription">
-		<spring:message code="recipe.step.description" />:
+	<form:label path="value">
+		<spring:message code="ingredient.value" />:
 	</form:label>
-	<form:textarea path="description" />
-	<form:errors cssClass="error" path="description" />
+	<form:input path="value" />
+	<form:errors cssClass="error" path="value" />
 	<br />
 	
-	<form:label path="hints">
-		<spring:message code="recipe.hints" />:
-	</form:label>
-	<form:input path="hints" />
-	<form:errors cssClass="error" path="hints" />
-		
-	<br/>
-	
-	
 	<input type="submit" name="save"
-	value="<spring:message code="recipe.save" />" 
-	onclick="javascript: relativeRedir('recipe/display.do?recipeId=${recipe.id}');" />&nbsp; 	
+	value="<spring:message code="recipe.save" />"/>&nbsp; 	
 
 	
 	<input type="button" name="cancel"
-		value="<spring:message code="recipe.cancel" />"
-		onclick="javascript: relativeRedir('recipe/display.do?recipeId=${recipe.id}');" />&nbsp;
+		value="<spring:message code="recipe.cancel" />"/>&nbsp;
 	<br />
 
 	

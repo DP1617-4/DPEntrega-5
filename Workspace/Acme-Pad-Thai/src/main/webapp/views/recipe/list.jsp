@@ -21,23 +21,37 @@
 
 <security:authorize access="hasRole('USER')">
 	<div>
-		<a href="recipe/own/list.do"> <spring:message
+		<a href="user/recipe/own/list.do"> <spring:message
 				code="recipe.user.list.own" />
 		</a>
 	</div>
 </security:authorize>
 
+
+<spring:message code="recipe.filter"/>
+<form:form action="recipe/filter.do" modelAttribute="FilterString">
+
+	
+	<form:input path="filter"/>
+	
+	<input type="submit" name="type"
+	value ="<spring:message code="reipe.filter.button"/>" />
+
+</form:form>
+
+
+
 <display:table pagesize="10" class="displaytag" keepStatus="true"
 	name="recipe" requestURI="${requestURI}" id="row">
 	<jstl:set var="loggedactor" value=<security:authentication property="principal.username" />/>
 	<jstl:set var="recipeuser" value="${row.user}"/> 
+	<jstl:if test="${recipeuser.userAccount.id==loggedactor.id}">
 	<display:column>
-		<jstl:if test="${recipeuser.userAccount.id==loggedactor.id}">
 			<a href="recipe/edit.do?recipeId=${row.id}">
 				<spring:message	code="recipe.edit" />
 			</a>
-		</jstl:if>
 	</display:column>
+	</jstl:if>
 	
 	<!-- Attributes -->
 	
@@ -45,17 +59,18 @@
 	<display:column property="title" title="${titleHeader}" sortable="true" />
 	
 	<display:column>
-		<a href="recipe/user/list.do?userId=${recipeuser.id}"><spring:message code="recipe.user.list"/></a>
+		<a href="user/display.do?userId=${recipeuser.id}">${row.user}</a>
 	</display:column>
 	
 	<spring:message code="recipe.authored" var="authoredHeader" />
-	<display:column property="authored" title="${authoredHeader}" sortable="true" />
+	<display:column title="${authoredHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.authored}"pattern ="dd/mm/yyyy"/>" />
+	</display:column>
 	
 	<spring:message code="recipe.updated" var="updatedHeader" />
-	<display:column property="updated" title="${updatedHeader}" sortable="true" />
-	
-	<spring:message code="recipe.pictures" var="picturesHeader" />
-	<display:column property="pictures" title="${picturesHeader}" sortable="false" />
+	<display:column title="${updatedHeader}" sortable="true" >
+		<jstl:out value="<fmt:formatDate value="${row.updated}"pattern ="dd/mm/yyyy"/>" />
+	</display:column>
 	
 	<spring:message code="recipe.score" var="scoreHeader" />
 	<display:column property="score" title="${scoreHeader}" sortable="false" />
