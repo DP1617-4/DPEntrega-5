@@ -18,19 +18,31 @@
 <%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+<form:form action="property/edit.do" modelAttribute="property">
 
-<spring:message code="learningMaterial.select.header"/>
-<form:form action="learningMaterial/select.do" modelAttribute="SelectMaterial">
+	<form:hidden path="id" />
+	<form:hidden path="version" />
+	<form:hidden path="deleted"/>
+	<form:hidden path="value"/>
+
+	<form:label path="name">
+		<spring:message code="property.name" />:
+	</form:label>
+	<form:input path="name" />
+	<form:errors cssClass="error" path="name" />
+	<br />
+
+	<input type="submit" name="save"
+	value="<spring:message code="property.save" />" />&nbsp; 
+			
+	<jstl:if test="${property.id != 0}">
+		<input type="submit" name="delete"
+			value="<spring:message code="property.delete" />"/>&nbsp;
+	</jstl:if>
+	<input type="button" name="cancel"
+		value="<spring:message code="property.cancel" />"/>&nbsp;
+	<br />
 
 	
-	<form:select path="selected">
-		<form:option value="0" label="---"/>
-		<form:option value="1" label="Presentation"/>
-		<form:option value="2" label="Text"/>
-		<form:option value="3" label="Video"/>
-	</form:select>
-	
-	<input type="submit" name="type"
-	value ="<spring:message code="learningMaterial.select"/>" />
 
 </form:form>

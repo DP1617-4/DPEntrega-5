@@ -19,20 +19,31 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-<h3>${recipe.title}</h3>
+<h3><jstl:out value="${recipe.title}"/></h3>
 <br/>
-<p>${recipe.summary}</P>
-<p>${recipe.ticker}</P>
-<P><spring:message code="recipe.authored"/>${recipe.authored}</P>
-<P><spring:message code="recipe.updated"/>${recipe.updated}</p>
+<p><jstl:out value="${recipe.summary}"/></P>
+<p><jstl:out value="${recipe.ticker}"/></P>
+<P><spring:message code="recipe.authored"/><jstl:out value="<fmt:formatDate value="${recipe.authored}"pattern ="dd/mm/yyyy"/>" /></P>
+<P><spring:message code="recipe.updated"/><jstl:out value="<fmt:formatDate value="${recipe.updated}"pattern ="dd/mm/yyyy"/>" /></p>
 <p><spring:message code="recipe.pictures"/></p>
+<p>
+
+<jstl:if test="${recipeuser.userAccount==loggedactor}">
+<form:label path="picture"><spring:message code="recipe.picture.url"/></form:label>
+<form:input path="picture" />
+<a href="recipe/picture/add.do?recipeId=${recipe.id}&picture=${picture}">
+	<spring:message	code="recipe.pictures.add" />
+</a>
+</jstl:if>
+
+</p>
 <ul>
-	<jstl:forEach var="picture" items="${recipe.pictures}">
-		<li>${picture}</li>
+	<jstl:forEach var="picture" items="${recipe.pictures}" >
+		<li><img src="${picture}"/></li>
 	</jstl:forEach>
 </ul>
-<p>${recipe.hints}</p>
-<p>${recipe.score}</p>
+<p><jstl:out value="${recipe.hints}"/></p>
+<p><jstl:out value="${recipe.score}"/></p>
 <br/>
 
 <p><spring:message	code="recipe.ingredients" />
@@ -42,7 +53,7 @@
 	<form:select path="selectedIngredient" >
     	<form:options items="${ingredientlist}" itemValue="id"  itemLabel="name" />
 	</form:select>
-	<a href="recipe/addingredients.do?recipeId=${recipe.id}$ingredientId=${selectedIngredient}">
+	<a href="recipe/addingredients.do?recipeId=${recipe.id}&ingredientId=${selectedIngredient}">
 		<spring:message	code="recipe.addingredients" />
 	</a>
 </jstl:if>
@@ -62,9 +73,12 @@
 	<spring:message code="recipe.ingredient.unit" var="unitHeader" />
 	<display:column property="unit" title="${unitHeader}" sortable="false" />
 	
+	<jstl:if test="${recipeuser.userAccount==loggedactor}">
 	<display:column>
-		<a href="recipe/ingredient/remove.do?ingredientId=${row.id}"><spring:message code="recipe.ingredient.remove"/></a>
+		<a href="recipe/ingredient/remove.do?quantityId=${row.id}"><spring:message code="recipe.ingredient.remove"/></a>
 	</display:column>
+	</jstl:if>
+	
 	
 </display:table>
 
@@ -93,8 +107,22 @@
 	<spring:message code="recipe.step.pictures" var="picturesHeader" />
 	<display:column property="pictures" title="${picturesHeader}" sortable="false" />
 	
+	<jstl:if test="${recipeuser.userAccount==loggedactor}">
 	<display:column>
-		<a href="recipe/step/remove.do?stepId=${row.id}"><spring:message code="recipe.step.remove"/></a>
+		<a href="recipe/step/delete.do?stepId=${row.id}"><spring:message code="recipe.step.remove"/></a>
 	</display:column>
+	</jstl:if>
 	
 </display:table>
+
+<p><a href="comment/list.do?recipeId=${recipe.id}"><spring:message code="recipe.comment.list"/></a></p>
+
+<security:authorize access="hasAnyRole('SPONSOR', 'ADMIN')">
+<p><a href="comment/add.do?stepId=${recipe.id}"><spring:message code="recipe.comment.do"/></a></p>
+</security:authorize>
+
+<jstl:if test="${recipeuser.userAccount==loggedactor}">
+<a href="recipe/delete.do?recipeId=${recipe.id}">
+	<spring:message	code="recipe.delete" />
+</a>
+</jstl:if>

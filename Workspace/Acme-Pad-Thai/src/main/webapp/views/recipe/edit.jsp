@@ -35,6 +35,7 @@
 	<form:hidden path="comments"/>
 	<form:hidden path="categories"/>
 	<form:hidden path="quantities"/>
+	<form:hidden path="pictures"/>
 
 	<form:label path="title">
 		<spring:message code="recipe.title" />:
@@ -56,22 +57,16 @@
 	<form:input path="hints" />
 	<form:errors cssClass="error" path="hints" />
 	<br />
-	
-	<!-- <input type="text" name="consult.consultTechnos[].techno.id" /> USEFUL FOR PICTURES-->
-	
 
 	<input type="submit" name="save"
-	value="<spring:message code="recipe.save" />" 
-	onclick="javascript: relativeRedir('recipe/list.do');" />&nbsp; 
+	value="<spring:message code="recipe.save" />" />&nbsp; 
 			
 	<jstl:if test="${recipe.id != 0}">
 		<input type="submit" name="delete"
-			value="<spring:message code="recipe.delete" />"
-			onclick="return confirm('<spring:message code="recipe.confirm.delete" />')" />&nbsp;
+			value="<spring:message code="recipe.delete" />"/>&nbsp;
 	</jstl:if>
 	<input type="button" name="cancel"
-		value="<spring:message code="recipe.cancel" />"
-		onclick="javascript: relativeRedir('recipe/list.do');" />&nbsp;
+		value="<spring:message code="recipe.cancel" />"/>&nbsp;
 	<br />
 
 	

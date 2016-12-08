@@ -1,9 +1,9 @@
 package forms;
 
 
-public class selectMaterial {
+public class SelectMaterial {
 	
-	public selectMaterial(){
+	public SelectMaterial(){
 		super();
 	}
 
